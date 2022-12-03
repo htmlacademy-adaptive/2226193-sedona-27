@@ -75,25 +75,16 @@
             <legend class="form-block__title">Ваше общее впечатление:</legend>
             <ul class="form-block__fields form-fields">
               <li class="form-fields__item form-field">
-                <label class="form-field__title">
-                  <input class="visually-hidden form-field__control form-control input input--radio" type="radio" name="impression" value="positive" checked>
-                  <span class="input__mark mark-radio"></span>
-                  <span class="input__label">Скорее положительное</span>
-                </label>
+                <input class="visually-hidden form-field__control form-control input input--radio" id="impression-good" type="radio" name="impression" value="positive" checked>
+                <label class="form-field__title" for="impression-good">Скорее положительное</label>
               </li>
               <li class="form-fields__item form-field">
-                <label class="form-field__title">
-                  <input class="visually-hidden form-field__control form-control input input--radio" type="radio" name="impression" value="negative">
-                  <span class="input__mark mark-radio"></span>
-                  <span class="input__label">Скорее отрицательное</span>
-                </label>
+                <input class="visually-hidden form-field__control form-control input input--radio" id="impression-bad" type="radio" name="impression" value="negative">
+                <label class="form-field__title" for="impression-bad">Скорее отрицательное</label>
               </li>
               <li class="form-fields__item form-field">
-                <label class="form-field__title">
-                  <input class="visually-hidden form-field__control form-control input input--radio" type="radio" name="impression" value="dont-know">
-                  <span class="input__mark mark-radio"></span>
-                  <span class="input__label">Затрудняюсь ответить</span>
-                </label>
+                <input class="visually-hidden form-field__control form-control input input--radio" id="impression-nothing" type="radio" name="impression" value="dont-know">
+                <label class="form-field__title" for="impression-nothing">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
@@ -101,32 +92,20 @@
             <legend class="form-block__title">Посещенные достопримечательности:</legend>
             <ul class="form-block__fields form-fields">
               <li class="form-fields__item form-field">
-                <label class="form-field__title">
-                  <input class="visually-hidden form-field__control form-control input input--checkbox" type="checkbox" name="devils-bridge" checked>
-                  <span class="input__mark"></span>
-                  <span class="input__label">Мост Дьявола</span>
-                </label>
+                <input class="visually-hidden form-field__control form-control input input--checkbox" id="devils-bridge" type="checkbox" name="devils-bridge" checked>
+                <label class="form-field__title" for="devils-bridge">Мост Дьявола</label>
               </li>
               <li class="form-fields__item form-field">
-                <label class="form-field__title">
-                  <input class="visually-hidden form-field__control form-control input input--checkbox" type="checkbox" name="the-bell-mountain" checked>
-                  <span class="input__mark"></span>
-                  <span class="input__label">Гора-Колокол</span>
-                </label>
+                <input class="visually-hidden form-field__control form-control input input--checkbox" id="the-bell-mountain" type="checkbox" name="the-bell-mountain" checked>
+                <label class="form-field__title" for="the-bell-mountain">Гора-Колокол</label>
               </li>
               <li class="form-fields__item form-field">
-                <label class="form-field__title">
-                  <input class="visually-hidden form-field__control form-control input input--checkbox" type="checkbox" name="slide-park" checked>
-                  <span class="input__mark"></span>
-                  <span class="input__label">Слайд-парк</span>
-                </label>
+                <input class="visually-hidden form-field__control form-control input input--checkbox" id="slide-park" type="checkbox" name="slide-park" checked>
+                <label class="form-field__title" for="slide-park">Слайд-парк</label>
               </li>
               <li class="form-fields__item form-field">
-                <label class="form-field__title">
-                  <input class="visually-hidden form-field__control form-control input input--checkbox" type="checkbox" name="red-rocks">
-                  <span class="input__mark"></span>
-                  <span class="input__label">Красные скалы</span>
-                </label>
+                <input class="visually-hidden form-field__control form-control input input--checkbox" id="red-rocks" type="checkbox" name="red-rocks">
+                <label class="form-field__title" for="red-rocks">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
@@ -134,14 +113,16 @@
             <legend class="form-block__title">Опишите свои эмоции:</legend>
             <input class="form-control input textarea" type="text" id="feedback-form-feedback" name="feedback-form-feedback" placeholder="Опишите подробно все свои восторги">
           </fieldset>
-          <button class="feedback-form__button button button--primary" type="submit">Отправить отзыв</button>
-          <p>* — обязательные поля</p>
+          <div class="feedback-form__footer">
+            <button class="feedback-form__button button button--primary" type="submit">Отправить отзыв</button>
+            <span class="feedback-form__note">* — обязательные поля</span>
+          </div>
         </form>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__container">
-        <p class="footer__tag footer-tag">#visitsedona</p>
+        <p class="footer__tag tag">#visitsedona</p>
         <ul class="footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>

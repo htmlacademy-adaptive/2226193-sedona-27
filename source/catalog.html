@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Каталог фото и видео</title>
   </head>
-  <body>
+  <body class="page__body">
     <header class="header">
       <nav class="site-navigation">
         <a class="site-navigation__logo">
@@ -40,30 +40,51 @@
         </div>
       </section>
       <section class="gallery">
+        <h2 class="visually-hidden">Фотогалерея</h2>
         <ul class="cards">
           <li class="cards-item card">
-            <img class="card__item card-image">
-            <p class="card__item card-title"></p>
-            <p class="card__item card-author"></p>
-            <p class="card__item card-likes"></p>
+            <img class="card__image">
+            <div class="card__info">
+              <p class="card__title">Неродные просторы</p>
+              <p class="card__author">Автор фото: Борис</p>
+              <div class="card__likes card-likes__container">
+                <button class="card-likes__button button like-button" type="button"></button>
+                <p class="card-likes__likes-count">1350</p>
+              </div>
+            </div>
           </li>
           <li class="cards-item card">
             <img class="card__item card-image">
-            <p class="card__item card-title"></p>
-            <p class="card__item card-author"></p>
-            <p class="card__item card-likes"></p>
+            <div class="card__info">
+              <p class="card__item card-title">Местная растительность</p>
+              <p class="card__item card-author">Автор фото: Сергей</p>
+              <div class="card__likes card-likes__container">
+                <button class="card-likes__button button like-button" type="button"></button>
+                <p class="card-likes__likes-count">143</p>
+              </div>
+            </div>
           </li>
           <li class="cards-item card">
             <img class="card__item card-image">
-            <p class="card__item card-title"></p>
-            <p class="card__item card-author"></p>
-            <p class="card__item card-likes"></p>
+            <div class="card__info">
+              <p class="card__item card-title">Дорога на север</p>
+              <p class="card__item card-author">Автор фото: Петр</p>
+              <div class="card__likes card-likes__container">
+                <button class="card-likes__button button like-button" type="button"></button>
+                <p class="card-likes__likes-count">96</p>
+              </div>
+            </div>
           </li>
           <li class="cards-item card">
             <img class="card__item card-image">
-            <p class="card__item card-title"></p>
-            <p class="card__item card-author"></p>
-            <p class="card__item card-likes"></p>
+            <div class="card__info">
+              <p class="card__item card-title">Мост дьявола</p>
+              <p class="card__item card-author">Автор фото: Антон</p>
+              <div class="card__likes card-likes__container">
+                <button class="card-likes__button button like-button" type="button"></button>
+                <p class="card-likes__likes-count">254</p>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
