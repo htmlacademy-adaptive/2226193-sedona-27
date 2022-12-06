@@ -1,1 +1,8 @@
-// Начните писать стили здесь
+@use "./global/variables.scss";
+@use "./global/mixins.scss";
+@use "./global/fonts.scss";
+@use "./global/common.scss";
+@use "./blocks/page.scss";
+@use "./blocks/header.scss";
+@use "./blocks/site-navigation.scss";
+@use "./blocks/hero.scss"

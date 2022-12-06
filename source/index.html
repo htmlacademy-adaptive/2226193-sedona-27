@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт города Седона</title>
   </head>
-  <body>
+  <body class="page__body">
     <header class="header">
       <nav class="site-navigation">
         <a class="site-navigation__logo">
-          <img src="" width="185" height="196" alt="Логотип Седоны.">
+          <img src="img/header/logo.svg" width="185" height="96" alt="Логотип Седоны.">
         </a>
         <button class="site-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню сайта</span>
         </button>
-        <div class="site-navigation__container"></div>
+        <div class="site-navigation__container site-navigation__container--hidden">
           <ul class="site-navigation__list">
-            <li class="site-navigation__item site-navigation__item--current">
+            <li class="site-navigation__item site-navigation__item--current site-navigation__item--first">
               <a class="site-navigation__link">Главная</a>
             </li>
             <li class="site-navigation__item">
@@ -28,13 +30,14 @@
               <a class="site-navigation__link" href="#">HTML Academy</a>
             </li>
           </ul>
+        </div>
       </nav>
     </header>
     <main class="main-container">
       <section class="hero">
         <div class="hero__container hero-image hero-image--main-page">
           <h1 class="visually-hidden">Город Седона</h1>
-          <img class="hero-image__img" src="" alt="" width="" height="">
+          <img class="hero-image__img" src="img/index/text-index.svg" width="282" height="214" alt="">
           <p class="visually-hidden">Welcome to the gorgeous <strong>Sedona</strong>. Because the Grand Canyon sucks!</p>
         </div>
         <div class="hero__description hero-description">
@@ -50,7 +53,7 @@
             <p class="advantage__number">— №1 —</p>
             <p class="advantage__description">Седона не аттракцион для туристов, там течёт своя жизнь</p>
             <img class="advantage__image">
-            <ul class="advantage__recomendations">
+            <ul class="advantage__recomendations recomendations">
               <li class="recomendations__item recomendations__item--house">
                 <p class="recomendations__title">Жилье</p>
                 <p class="recomendations__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -95,6 +98,7 @@
         <a class="hook__find-hotel button button--primary" href="#">Найти гостиницу</a>
       </section>
       <section class="map">
+        <h2 class="visually-hidden">Карта</h2>
 
       </section>
     </main>

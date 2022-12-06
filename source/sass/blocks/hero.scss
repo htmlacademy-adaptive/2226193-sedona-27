@@ -1,0 +1,20 @@
+.hero {
+  background-color: rgb(132, 198, 231);
+  background-image: url("");
+}
+
+.hero__container {
+
+}
+
+.hero-image {
+
+
+  &--main-page {
+    background-image: url("img/index/text-index.svg");
+    background-position: center;
+    background-size: 282px 214px;
+  }
+}
+
+.
