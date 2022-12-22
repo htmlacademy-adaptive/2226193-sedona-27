@@ -1,0 +1,40 @@
+@use "global/variables";
+
+.input {
+  padding: 16px;
+  background-color: variables.$background-color-input;
+  border: none;
+
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  &--radio {
+
+  }
+
+  &--checkbox {
+
+  }
+
+  &--phone {
+
+  }
+
+  &--email {
+
+  }
+}
+
+.input__mark {
+
+}
+
+.input__label {
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+}

@@ -1,0 +1,22 @@
+@use "global/variables";
+
+.feedback-form {
+
+}
+
+.feedback-form__item {
+
+}
+
+.feedback-form__button {
+
+}
+
+.feedback-form__footnote {
+  color: variables.$text-color-primery;
+  opacity: 0.6;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: right;
+}

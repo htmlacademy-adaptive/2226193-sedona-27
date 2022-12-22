@@ -10,30 +10,33 @@
     <header class="header">
       <nav class="site-navigation">
         <a class="site-navigation__logo">
-          <img src="" width="" height="" alt="">
+          <img src="img/header/logo.svg" width="185" height="96" alt="Логотип Седоны.">
         </a>
-        <button class="site-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню сайта</span></button>
-        <div class="site-navigation__container"></div>
+        <button class="site-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню сайта</span>
+        </button>
+        <div class="site-navigation__container site-navigation__container--hidden">
           <ul class="site-navigation__list">
-            <li class="site-navigation__item site-navigation__item--current">
-              <a class="site-navigation__link">Главная</a>
+            <li class="site-navigation__item site-navigation__item--first">
+              <a class="site-navigation__link" href="index.html">Главная</a>
             </li>
             <li class="site-navigation__item">
               <a class="site-navigation__link" href="catalog.html">Фото и видео</a>
             </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="form.html">Форма отзыва</a>
+            <li class="site-navigation__item site-navigation__item--current">
+              <a class="site-navigation__link">Форма отзыва</a>
             </li>
             <li class="site-navigation__item">
               <a class="site-navigation__link" href="#">HTML Academy</a>
             </li>
           </ul>
+        </div>
       </nav>
     </header>
     <main>
       <section class="hero">
-        <div class="hero__image hero-image">
-          <img class="hero-image__img" src="" alt="" width="" height="">
+        <div class="hero__container">
+          <img class="hero__image" src="img/hero-text.svg" alt="" width="229" height="39">
           <p class="visually-hidden">Sedona.</p>
         </div>
         <div class="hero__description hero-description">
@@ -137,7 +140,7 @@
             <input class="form-field__control form-control input textarea" type="text" id="feedback-form-feedback" name="feedback-form-feedback" placeholder="Опишите подробно все свои восторги">
           </fieldset>
           <button class="feedback-form__button button button--primary" type="submit">Отправить отзыв</button>
-          <p>* — обязательные поля</p>
+          <p class="feedback-form__footnote">* — обязательные поля</p>
         </form>
       </section>
     </main>
@@ -146,22 +149,40 @@
         <p class="footer__tag footer-tag">#visitsedona</p>
         <ul class="footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--vkontakte visually-hidden" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+            <a class="social__link social__link--telegram visually-hidden" href="https://t.me/htmlacademy">Мы в Телеграме</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy">Мы в Ютубе</a>
+            <a class="social__link social__link--youtube visually-hidden" href="https://www.youtube.com/htmlacademy">Мы в Ютубе</a>
           </li>
         </ul>
         <div class="footer__copyright copyright">
-          <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img>
+            <p class="copyright__text">Разработано</p>
+            <img class="copyright__image" src="/img/footer/htmlacademy-logo.svg" width="27" height="35" alt="Логотип html academy.">
           </a>
         </div>
       </div>
     </footer>
+    <div class="modal__container modal__container--close">
+      <div class="modal modal-error">
+        <section class="modal__content">
+          <p class="modal__title">Что-то пошло не так!</p>
+          <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </section>
+        <button class="modal-error__close-button button button--primary" type="button">Ok</button>
+      </div>
+    </div>
+    <div class="modal__container modal__container--close">
+      <div class="modal modal-success">
+        <section class="modal__content">
+          <p class="modal__title">Ваш отзыв отправлен!</p>
+          <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.&nbsp;В ближайшее время мы опубликуем его на сайте.&nbsp;</p>
+        </section>
+      </div>
+      <button class="modal-success__close-button button button--primary" type="button">Закрыть окно</button>
+    </div>
   </body>
 </html>

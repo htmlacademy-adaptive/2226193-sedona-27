@@ -1,0 +1,62 @@
+@use "global/variables";
+
+.card {
+
+}
+
+.card__image {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  overflow: hidden;
+
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--first {
+
+  }
+}
+
+.card__info {
+  padding: 0 20px;
+}
+
+.card__title {
+  margin-top: 15px;
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.card__author {
+  margin-top: 10px;
+  color: variables.$text-color-primery;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+}
+
+.card__likes-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 11px;
+}
+
+.card__likes {
+  background-image: url("/img/catalog/like-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 23px 21px;
+  background-position: left;
+  padding-left: 37px;
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+}

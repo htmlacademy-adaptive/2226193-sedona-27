@@ -1,0 +1,30 @@
+@use "global/variables";
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 20px 0;
+}
+
+.presentation__title {
+  padding-bottom: 40px;
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.presentation__text {
+  padding: 0 27px;
+  color: variables.$text-color-primery;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.presentation__video {
+
+}

@@ -1,0 +1,14 @@
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  padding: 24px 0 25px;
+  border-top: #e5e5e5 1px solid;
+
+  &:last-child {
+    border-bottom: #e5e5e5 1px solid;
+  }
+}

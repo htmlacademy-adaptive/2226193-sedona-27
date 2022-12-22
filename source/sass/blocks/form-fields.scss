@@ -1,0 +1,11 @@
+.form-fields {
+  list-style: none;
+}
+
+.form-fields__item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

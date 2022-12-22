@@ -1,9 +1,13 @@
-.site-navigation {
+@use "global/variables";
 
+.site-navigation {
+  display: flex;
 }
 
 .site-navigation__logo {
-  margin-bottom: -40px;
+  margin-right: 25px;
+  margin-bottom: -45px;
+  z-index: 1;
 }
 
 .site-navigation__toggle {
@@ -23,6 +27,7 @@
   width: 100%;
   position: absolute;
   top: 0;
+  z-index: 1;
 
   &--hidden {
     display: none;
@@ -37,7 +42,7 @@
 .site-navigation__item {
   width: 100%;
   padding: 17px 20px 12px;
-  background-color: #81b3d2;
+  background-color: variables.$background-color-secondary;
 
   &--first {
 
@@ -49,7 +54,7 @@
 }
 
 .site-navigation__link {
-  color: #ffffff;
+  color: variables.$background-color-primery;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;

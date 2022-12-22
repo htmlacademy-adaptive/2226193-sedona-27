@@ -1,0 +1,61 @@
+@use "global/variables";
+
+.advantage {
+  overflow: hidden;
+  background-color: variables.$background-color-secondary;
+
+  &--briefly {
+    padding: 24px 0;
+    background-color: variables.$background-color-tertiary;
+  }
+}
+
+.advantage__title {
+  margin-bottom: 11px;
+  color: variables.$title-color-secondary;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--briefly {
+    color: variables.$title-color-primery;
+  }
+}
+
+.advantage__number {
+  margin-bottom: 17px;
+  color: variables.$title-color-secondary;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--briefly {
+    color: variables.$text-color-primery;
+  }
+}
+
+.advantage__description {
+  color: variables.$title-color-secondary;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--briefly {
+    color: variables.$text-color-primery;
+  }
+}
+
+.advantage__image {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.advantage__recomendations {
+  padding: 23px 47px 46px;
+  list-style: none;
+}

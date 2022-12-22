@@ -1,20 +1,31 @@
+@use "global/variables";
+
 .hero {
-  background-color: rgb(132, 198, 231);
-  background-image: url("");
+
 }
 
 .hero__container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 52px 0 67px;
+  background-color: variables.$background-color-secondary;
+  background-image: url("/img/index/background_x1.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 902px 214px;
 
-}
-
-.hero-image {
-
-
-  &--main-page {
-    background-image: url("img/index/text-index.svg");
+  &--index {
+    padding: 90px 0;
     background-position: center;
-    background-size: 282px 214px;
+    background-size: 901px 389px;
   }
 }
 
-.
+.hero__image {
+
+}
+
+.hero__description {
+
+}

@@ -1,0 +1,23 @@
+@use "global/variables";
+
+.hero-description {
+  padding: 32px 0 16px;
+}
+
+.hero-description__title {
+  margin-bottom: 35px;
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-description__text {
+  color: variables.$text-color-primery;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+}

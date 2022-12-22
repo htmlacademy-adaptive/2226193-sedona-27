@@ -1,0 +1,30 @@
+@use "global/variables";
+
+.hook {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 49px;
+}
+
+.hook__title {
+  padding: 20px 29px 16px 29px;
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hook__text {
+  padding: 16px 29px 32px 29px;
+  color: variables.$text-color-primery;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hook__find-hotel-button {
+
+}

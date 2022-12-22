@@ -1,0 +1,10 @@
+@use "global/variables";
+
+.footer-tag {
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}

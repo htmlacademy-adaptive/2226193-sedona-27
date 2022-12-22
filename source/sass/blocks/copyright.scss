@@ -1,0 +1,19 @@
+@use "global/variables";
+
+.copyright {
+
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.copyright__text {
+  margin-right: 12px;
+  color: variables.$title-color-primery;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
