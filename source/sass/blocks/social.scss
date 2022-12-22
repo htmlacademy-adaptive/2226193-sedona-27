@@ -1,0 +1,42 @@
+@use "global/variables";
+
+.social {
+  margin: 0;
+  margin-bottom: 47px;
+  padding: 0;
+}
+
+.social__item {
+  width: 48px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: variables.$background-color-secondary;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+
+  &--vkontakte {
+    background-image: url("img/footer/socials_icons/icon-vkontakte.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 14px;
+  }
+
+  &--telegram {
+    background-image: url("img/footer/socials_icons/icon-telegram.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 18px;
+  }
+
+  &--youtube {
+    background-image: url("img/footer/socials_icons/icon-youtube.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 14px;
+  }
+}

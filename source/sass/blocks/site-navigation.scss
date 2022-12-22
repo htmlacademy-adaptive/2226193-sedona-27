@@ -1,0 +1,61 @@
+@use "global/variables";
+
+.site-navigation {
+  display: flex;
+}
+
+.site-navigation__logo {
+  margin-right: 25px;
+  margin-bottom: -45px;
+  z-index: 1;
+}
+
+.site-navigation__toggle {
+  padding: 17px 20px 17px 25px;
+  background-color: transparent;
+  background-image: url("../../img/header/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 23px 22px;
+  border: none;
+}
+
+.site-navigation__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.site-navigation__list {
+  margin: 0;
+  list-style-type: none;
+}
+
+.site-navigation__item {
+  width: 100%;
+  padding: 17px 20px 12px;
+  background-color: variables.$background-color-secondary;
+
+  &--first {
+
+  }
+
+  &--current {
+
+  }
+}
+
+.site-navigation__link {
+  color: variables.$background-color-primery;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
