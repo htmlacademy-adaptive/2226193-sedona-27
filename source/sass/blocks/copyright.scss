@@ -1,4 +1,5 @@
 @use "global/variables";
+@use "global/mixins";
 
 .copyright {
 
@@ -12,8 +13,5 @@
 
 .copyright__text {
   margin-right: 12px;
-  color: variables.$title-color-primery;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include mixins.text(variables.$title-color-primery);
 }

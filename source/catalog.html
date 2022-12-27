@@ -7,96 +7,105 @@
     <title>Каталог фото и видео</title>
   </head>
   <body class="page__body">
-    <header class="header">
-      <nav class="site-navigation">
-        <a class="site-navigation__logo">
-          <img src="img/header/logo.svg" width="185" height="96" alt="Логотип Седоны.">
-        </a>
-        <button class="site-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню сайта</span>
-        </button>
-        <div class="site-navigation__container site-navigation__container--hidden">
-          <ul class="site-navigation__list">
-            <li class="site-navigation__item site-navigation__item--first">
-              <a class="site-navigation__link" href="index.html">Главная</a>
+    <div class="page__container">
+      <header class="header">
+        <nav class="site-navigation">
+          <a class="site-navigation__logo" href="index.html">
+            <img src="img/header/logo.svg" width="185" height="96" alt="Логотип Седоны.">
+          </a>
+          <button class="site-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню сайта</span>
+          </button>
+          <div class="site-navigation__container site-navigation__container--hidden">
+            <ul class="site-navigation__list">
+              <li class="site-navigation__item site-navigation__item--first">
+                <a class="site-navigation__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link site-navigation__link--current">Фото и видео</a>
+              </li>
+              <li class="site-navigation__item site-navigation__item--empty"></li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="site-navigation__item">
+                <a class="site-navigation__link" href="https://htmlacademy.ru/">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="hero">
+          <div class="hero__container">
+            <img class="hero__image" src="img/hero-text.svg" alt="" width="229" height="39">
+            <p class="visually-hidden">Sedona.</p>
+          </div>
+          <div class="hero__description hero-description">
+            <h1 class="hero-description__title">Фото и видео</h1>
+            <p class="hero-description__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          </div>
+        </section>
+        <section class="gallery">
+          <ul class="cards">
+            <li class="cards__item card">
+              <img class="card__image card__image--first" src="img/catalog/photo-1.jpg" alt="" width="1200" height="400">
+              <div class="card__info">
+                <span class="card__description">
+                  <p class="card__title">Неродные просторы</p>
+                  <p class="card__author">Автор фото: Борис</p>
+                </span>
+                <span class="card__likes-container">
+                  <p class="card__likes">1350</p>
+                </span>
+              </div>
             </li>
-            <li class="site-navigation__item site-navigation__item--current">
-              <a class="site-navigation__link">Фото и видео</a>
+            <li class="cards__item card">
+              <img class="card__image" src="img/catalog/photo-2.jpg" alt="" width="400" height="267">
+              <div class="card__info">
+                <span class="card__description">
+                  <p class="card__title">Местная растительность</p>
+                  <p class="card__author">Автор фото: Сергей</p>
+                </span>
+                <span class="card__likes-container">
+                  <p class="card__likes">143</p>
+                </span>
+              </div>
             </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="form.html">Форма отзыва</a>
+            <li class="cards__item card">
+              <img class="card__image" src="img/catalog/photo-3.jpg" alt="" width="400" height="267">
+              <div class="card__info">
+                <span class="card__description">
+                  <p class="card__title">Дорога на север</p>
+                  <p class="card__author">Автор фото: Петр</p>
+                </span>
+                <span class="card__likes-container">
+                  <p class="card__likes">96</p>
+                </span>
+              </div>
             </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#">HTML Academy</a>
+            <li class="cards__item card">
+              <img class="card__image" src="img/catalog/photo-4.jpg" alt="" width="400" height="267">
+              <div class="card__info">
+                <span class="card__description">
+                  <p class="card__title">Мост дьявола</p>
+                  <p class="card__author">Автор фото: Антон</p>
+                </span>
+                <span class="card__likes-container">
+                  <p class="card__likes">254</p>
+                </span>
+              </div>
             </li>
           </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="hero__container">
-          <img class="hero__image" src="img/hero-text.svg" alt="" width="229" height="39">
-          <p class="visually-hidden">Sedona.</p>
-        </div>
-        <div class="hero__description hero-description">
-          <h1 class="hero-description__title">Фото и видео</h1>
-          <p class="hero-description__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        </div>
-      </section>
-      <section class="gallery">
-        <ul class="cards">
-          <li class="cards__item card">
-            <img class="card__image card__image--first" src="img/catalog/photo-1.jpg" alt="" width="1200" height="400">
-            <div class="card__info">
-              <p class="card__title">Неродные просторы</p>
-              <p class="card__author">Автор фото: Борис</p>
-              <span class="card__likes-container">
-                <p class="card__likes">1350</p>
-              </span>
-            </div>
-          </li>
-          <li class="cards__item card">
-            <img class="card__image" src="img/catalog/photo-2.jpg" alt="" width="400" height="267">
-            <div class="card__info">
-              <p class="card__title">Местная растительность</p>
-              <p class="card__author">Автор фото: Сергей</p>
-              <span class="card__likes-container">
-                <p class="card__likes">143</p>
-              </span>
-            </div>
-          </li>
-          <li class="cards__item card">
-            <img class="card__image" src="img/catalog/photo-3.jpg" alt="" width="400" height="267">
-            <div class="card__info">
-              <p class="card__title">Дорога на север</p>
-              <p class="card__author">Автор фото: Петр</p>
-              <span class="card__likes-container">
-                <p class="card__likes">96</p>
-              </span>
-            </div>
-          </li>
-          <li class="cards__item card">
-            <img class="card__image" src="img/catalog/photo-4.jpg" alt="" width="400" height="267">
-            <div class="card__info">
-              <p class="card__title">Мост дьявола</p>
-              <p class="card__author">Автор фото: Антон</p>
-              <span class="card__likes-container">
-                <p class="card__likes">254</p>
-              </span>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="presentation">
-        <h2 class="visually-hidden">Видеопрезентация</h2>
-        <p class="presentation__title">Все еще сомневаетесь?</p>
-        <p class="presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <span class="presentation__video"></span>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__container">
+        </section>
+        <section class="presentation">
+          <h2 class="visually-hidden">Видеопрезентация</h2>
+          <p class="presentation__title">Все еще сомневаетесь?</p>
+          <p class="presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <span class="presentation__video"></span>
+        </section>
+      </main>
+      <footer class="footer">
         <p class="footer__tag footer-tag">#visitsedona</p>
         <ul class="footer__social social">
           <li class="social__item">
@@ -115,7 +124,7 @@
             <img class="copyright__image" src="/img/footer/htmlacademy-logo.svg" width="27" height="35" alt="Логотип html academy.">
           </a>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

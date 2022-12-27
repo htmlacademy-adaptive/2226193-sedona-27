@@ -1,23 +1,59 @@
 @use "global/variables";
+@use "global/mixins";
 
 .advantage {
   overflow: hidden;
   background-color: variables.$background-color-secondary;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
 
   &--briefly {
     padding: 24px 0;
     background-color: variables.$background-color-tertiary;
+
+    @media (min-width: variables.$tablet-width) {
+      flex-direction: column;
+      width: 256px;
+      padding: 52px 33px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      width: 400px;
+      padding: 63px 50px;
+    }
+  }
+}
+
+.advantage__container {
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.flex(column);
+    justify-content: center;
+    width: 256px;
+    padding: 51px 33px 31px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 400px;
+    padding: 52px 50px 51px;
   }
 }
 
 .advantage__title {
   margin-bottom: 11px;
-  color: variables.$title-color-secondary;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
+  @include mixins.title-small(variables.$title-color-secondary);
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.title(variables.$title-color-secondary);
+  }
 
   &--briefly {
     color: variables.$title-color-primery;
@@ -26,10 +62,7 @@
 
 .advantage__number {
   margin-bottom: 17px;
-  color: variables.$title-color-secondary;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include mixins.text(variables.$text-color-secondary);
   text-align: center;
 
   &--briefly {
@@ -38,11 +71,12 @@
 }
 
 .advantage__description {
-  color: variables.$title-color-secondary;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include mixins.text(variables.$text-color-secondary);
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.text(variables.$text-color-secondary);
+  }
 
   &--briefly {
     color: variables.$text-color-primery;
@@ -50,12 +84,34 @@
 }
 
 .advantage__image {
+  display: block;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: variables.$tablet-width) {
+    width: 512px;
+    position: static;
+    transform: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 800px;
+  }
 }
 
 .advantage__recomendations {
+  margin: 0;
   padding: 23px 47px 46px;
   list-style: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
 }

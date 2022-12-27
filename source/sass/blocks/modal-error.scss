@@ -1,7 +1,23 @@
+@use "global/variables";
+
 .modal-error {
-  padding: 45px 40px 35px;
+  padding: 45px 41px 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 400px;
+    padding: 50px 47px 49px 46px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 48px 47px 49px 46px;
+  }
 }
 
-.modal-error__close-button {
-  margin: 28px 70px 0;
+.modal-error__button {
+  width: 180px;
+  margin-bottom: 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 272px;
+  }
 }

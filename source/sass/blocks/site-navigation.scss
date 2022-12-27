@@ -1,29 +1,58 @@
 @use "global/variables";
+@use "global/mixins";
 
 .site-navigation {
   display: flex;
+  width: 100%;
+  max-height: 56px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: variables.$tablet-width;
+    background-color: variables.$background-color-primery;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: variables.$desktop-width;
+  }
 }
 
 .site-navigation__logo {
-  margin-right: 25px;
-  margin-bottom: -45px;
+  display: block;
+  margin: 0 auto;
   z-index: 1;
+
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
 }
 
 .site-navigation__toggle {
-  padding: 17px 20px 17px 25px;
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  right: 20px;
+  top: 17px;
   background-color: transparent;
   background-image: url("../../img/header/icon-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 23px 22px;
   border: none;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }
 
 .site-navigation__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   position: absolute;
   top: 0;
@@ -32,15 +61,34 @@
   &--hidden {
     display: none;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    width: variables.$tablet-width;
+    position: static;
+    z-index: 0;
+
+    &--hidden {
+      display: block;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: variables.$desktop-width;
+  }
 }
 
 .site-navigation__list {
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
 }
 
 .site-navigation__item {
-  width: 100%;
   padding: 17px 20px 12px;
   background-color: variables.$background-color-secondary;
 
@@ -48,14 +96,39 @@
 
   }
 
-  &--current {
+  &--empty {
+    display: none;
+  }
 
+  @media (min-width: variables.$tablet-width) {
+    width: 153px;
+    padding: 18px 20px 17px;
+    background-color: transparent;
+
+    &--empty {
+      display: block;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 240px;
+    padding: 18px 40px 17px;
   }
 }
 
 .site-navigation__link {
-  color: variables.$background-color-primery;
-  font-weight: 700;
-  text-transform: uppercase;
+  @include mixins.title-small(variables.$title-color-secondary);
   text-decoration: none;
+
+  &--first {
+
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.text(variables.$title-color-primery);
+
+    &--current {
+      color: variables.$title-color-tertiary;
+    }
+  }
 }

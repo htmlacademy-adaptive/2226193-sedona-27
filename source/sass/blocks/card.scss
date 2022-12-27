@@ -1,62 +1,145 @@
 @use "global/variables";
+@use "global/mixins";
 
 .card {
+  @media (min-width: variables.$tablet-width) {
 
-}
+  }
 
-.card__image {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  overflow: hidden;
-
-  position: relative;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  &--first {
+  @media (min-width: variables.$desktop-width) {
 
   }
 }
 
+.card__image {
+  display: block;
+  width: 280px;
+  height: 280px;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  overflow: hidden;
+
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    width: 324px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 400px;
+  }
+
+  &--first {
+    @media (min-width: variables.$tablet-width) {
+      width: 648px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      width: 1200px;
+    }
+  }
+}
+
 .card__info {
-  padding: 0 20px;
+  padding: 15px 20px 0;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 15px;
+    background-color: variables.$background-color-input;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    padding: 22px 20px 15px;
+    background-color: rgb(0, 0, 0, 0.3);
+  }
+}
+
+.card__description {
+  @media (min-width: variables.$tablet-width) {
+
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
 }
 
 .card__title {
-  margin-top: 15px;
   color: variables.$title-color-primery;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$title-color-secondary;
+  }
 }
 
 .card__author {
-  margin-top: 10px;
   color: variables.$text-color-primery;
   font-size: 14px;
   line-height: 21px;
   text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$text-color-secondary;
+  }
 }
 
 .card__likes-container {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   margin-top: 11px;
-}
-
-.card__likes {
+  height: 30px;
   background-image: url("/img/catalog/like-icon.svg");
   background-repeat: no-repeat;
   background-size: 23px 21px;
-  background-position: left;
+  background-position: left top;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
+}
+
+.card__likes {
   padding-left: 37px;
   color: variables.$title-color-primery;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 32px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$title-color-secondary;
+  }
 }

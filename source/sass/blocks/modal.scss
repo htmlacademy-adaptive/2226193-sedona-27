@@ -1,7 +1,12 @@
 @use "global/variables";
+@use "global/mixins";
 
 .modal {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-color: variables.$background-color-primery;
 }
 
 .modal__container {
@@ -12,24 +17,54 @@
 }
 
 .modal__content {
+  background-color: variables.$background-color-primery;
 
+  &--error {
+    padding-bottom: 28px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding-bottom: 25px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding-bottom: 23px;
+    }
+  }
+
+  &--success {
+    padding: 39px 39px 30px 37px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 53px 99px 30px 97px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 51px 99px 28px 97px;
+    }
+  }
 }
 
 .modal__title {
   margin-bottom: 32px;
-  color: variables.$title-color-primery;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-transform: uppercase;
+  @include mixins.title();
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .modal__text {
-  color: variables.$text-color-primery;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
+  @include mixins.text();
   text-align: center;
 }
 
+.modal__button-container {
+  padding: 20px;
+  background-color: variables.$background-color-input;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 44px 91px;
+  }
+}

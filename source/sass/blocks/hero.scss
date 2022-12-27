@@ -10,22 +10,32 @@
   position: relative;
   padding: 52px 0 67px;
   background-color: variables.$background-color-secondary;
-  background-image: url("/img/index/background_x1.jpg");
+  background-image: url("/img/background_x1.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 902px 214px;
 
   &--index {
     padding: 90px 0;
     background-position: center;
-    background-size: 901px 389px;
+    background-size: cover;
   }
 }
 
 .hero__image {
-
+  @media (min-width: variables.$tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
 }
 
 .hero__description {
+  padding: 37px 20px 25px;
 
+  @media (min-width: variables.$tablet-width) {
+    padding: 66px 155px 67px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 100px 370px 65px;
+  }
 }
