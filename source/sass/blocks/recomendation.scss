@@ -1,0 +1,77 @@
+@use "global/variables";
+@use "global/mixins";
+
+.recomendation {
+
+  @media (min-width: variables.$tablet-width) {
+    width: 190px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
+
+  &--house {
+
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 60px 33px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 69px 50px;
+    }
+  }
+
+  &--food {
+
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 62px 33px 61px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 72px 50px 71px;
+    }
+  }
+
+  &--gift {
+
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 64px 33px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 69px 50px 67px;
+    }
+  }
+}
+
+.recomendation__title {
+  margin-bottom: 16px;
+  @include mixins.title-small();
+  text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.title();
+    text-align: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
+}
+
+.recomendation__text {
+  @include mixins.text();
+  text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+
+  }
+}

@@ -1,11 +1,54 @@
 @use "global/variables";
 
 .feedback-form {
+  padding: 0 20px 24px;
 
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 60px 64px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 120px 64px;
+  }
+}
+
+.feedback-form__container {
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .feedback-form__item {
+  padding: 50px 0 30px;
 
+  &--column {
+    @media (min-width: variables.$tablet-width) {
+      padding: 0 43px 75px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.feedback-form__button-container {
+  padding: 56px 0 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0 64px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
 }
 
 .feedback-form__button {

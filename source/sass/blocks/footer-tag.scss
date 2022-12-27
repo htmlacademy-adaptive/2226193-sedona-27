@@ -1,10 +1,7 @@
 @use "global/variables";
+@use "global/mixins";
 
 .footer-tag {
-  color: variables.$title-color-primery;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  text-transform: uppercase;
+  @include mixins.title();
   text-align: center;
 }

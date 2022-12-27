@@ -1,7 +1,16 @@
+@use "global/variables";
+
 .modal-success {
-  padding: 39px 38px 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 640px;
+  }
 }
 
-.modal-success__close-button {
-  margin: 20px;
+.modal-success__button {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 458px;
+  }
 }

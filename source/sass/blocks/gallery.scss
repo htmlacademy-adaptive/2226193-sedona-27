@@ -1,3 +1,11 @@
-.gallery {
+@use "global/variables";
 
+.gallery {
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 60px 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
+  }
 }

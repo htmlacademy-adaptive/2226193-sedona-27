@@ -4,6 +4,7 @@
   padding: 16px;
   background-color: variables.$background-color-input;
   border: none;
+  box-sizing: border-box;
 
   color: variables.$title-color-primery;
   font-weight: 700;
@@ -24,6 +25,10 @@
 
   &--email {
 
+  }
+
+  &::placeholder {
+    color: rgb(0, 0, 0, 0.3);
   }
 }
 

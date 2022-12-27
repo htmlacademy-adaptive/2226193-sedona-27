@@ -1,5 +1,23 @@
+@use "global/variables";
+
 .form-fields {
   list-style: none;
+
+  &--radios {
+    @media (min-width: variables.$tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  &--checkboxs {
+    @media (min-width: variables.$tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
 }
 
 .form-fields__item {

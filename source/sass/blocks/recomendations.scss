@@ -1,9 +1,8 @@
 @use "global/variables";
+@use "global/mixins";
 
 .recomendations {
-
   background-color: variables.$background-color-primery;
-
 }
 
 .recomendations__item {
@@ -13,33 +12,16 @@
     margin-bottom: 0;
   }
 
-  &--house {
-
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.flex(column);
+    align-items: center;
+    width: 256px;
+    margin: 0;
   }
 
-  &--food {
-
-  }
-
-  &--gift {
-
+  @media (min-width: variables.$desktop-width) {
+    width: 400px;
   }
 }
 
-.recomendations__title {
-  margin-bottom: 16px;
-  color: variables.$title-color-primery;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-transform: uppercase;
-  text-align: left;
-}
 
-.recomendations__text {
-  color: variables.$text-color-primery;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  text-align: left;
-}
