@@ -21,11 +21,45 @@
 }
 
 .feedback-form__item {
+  position: relative;
   padding: 50px 0 30px;
 
-  &--column {
-    @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) {
+
+    &--column {
       padding: 0 43px 75px;
+
+      &:first-child:after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 338px;
+        top: -40px;
+        right: 0;
+        background-color: #dbdbdb;
+      }
+    }
+
+    &--row {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 123px;
+        height: 1px;
+        top: -35px;
+        left: 0;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 123px;
+        height: 1px;
+        top: -35px;
+        right: 0;
+        background-color: #dbdbdb;
+      }
     }
   }
 

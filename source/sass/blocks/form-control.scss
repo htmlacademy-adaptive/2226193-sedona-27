@@ -1,3 +1,54 @@
 .form-control {
+  position: relative;
 
+  &--phone {
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: #e6e6e6;
+      background-image: url("/img/form/phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px 18px;
+    }
+  }
+
+  &--email {
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: #e6e6e6;
+      background-image: url("/img/form/mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 12px;
+    }
+  }
+
+  &:checked + .input__mark::after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 12px;
+    width: 22px;
+    height: 16px;
+    background: url("/img/form/tick.svg") no-repeat center;
+  }
+
+  &:checked + .input__mark--radio::after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #333333;
+    content: "";
+  }
 }

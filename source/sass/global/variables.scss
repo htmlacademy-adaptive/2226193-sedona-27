@@ -1,4 +1,5 @@
 /* Viewports */
+$mobile-width-only: 767px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
@@ -6,11 +7,20 @@ $desktop-width: 1200px;
 $background-color-primery: #ffffff;
 $background-color-secondary: #81b3d2;
 $background-color-tertiary: #eeeeee;
+
+$background-color-hover: #669ec0;
+$background-color-active: #5496bd;
+
 $background-color-input: #f2f2f2;
+$background-color-input-hover: #e5e5e5;
+$background-color-input-active: #d5d5d5;
 
 $title-color-primery: #000000;
 $title-color-secondary: #ffffff;
 $title-color-tertiary: #766357;
+
+$title-color-hover: #81b3d2;
+$title-color-active: rgb(#000000, 0.3);
 
 $text-color-primery: #333333;
 $text-color-secondary: #ffffff;

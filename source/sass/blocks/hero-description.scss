@@ -26,3 +26,9 @@
   @include mixins.text();
   text-align: center;
 }
+
+.hero-description__text br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}

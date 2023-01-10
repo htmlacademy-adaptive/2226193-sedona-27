@@ -1,14 +1,17 @@
-body {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-button {
-  font-family: inherit;
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
 }
 
-input {
+button,
+input,
+textarea {
   font-family: inherit;
 }
 

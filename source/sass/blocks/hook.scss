@@ -41,6 +41,12 @@
   }
 }
 
+.hook__text br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
 .hook__find-hotel-button {
   width: 284px;
 

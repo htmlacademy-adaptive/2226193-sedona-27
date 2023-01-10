@@ -1,3 +1,46 @@
-.map {
+@use "global/variables";
 
+.map {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 27px;
+    background-color: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-color: variables.$background-color-secondary;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+}
+
+.map__container {
+  border: none;
+  display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    width: variables.$tablet-width;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: variables.$desktop-width;
+  }
 }

@@ -1,42 +1,54 @@
 @use "global/variables";
 
 .input {
+  width: 100%;
   padding: 16px;
   background-color: variables.$background-color-input;
   border: none;
-  box-sizing: border-box;
 
   color: variables.$title-color-primery;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 
-  &--radio {
-
-  }
-
-  &--checkbox {
-
-  }
-
-  &--phone {
-
-  }
-
-  &--email {
-
+  &--with-icon {
+    padding-right: 74px;
   }
 
   &::placeholder {
     color: rgb(0, 0, 0, 0.3);
   }
+
+  &:hover {
+    background-color: variables.$background-color-input-hover;
+  }
+
+  &:active {
+    background-color: variables.$background-color-primery;
+    box-shadow: inset 0px 0px 0px 4px variables.$background-color-input-hover;
+  }
+
+  &:disabled {
+
+  }
 }
 
 .input__mark {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: variables.$background-color-input;
 
+  &--radio {
+    border-radius: 50%;
+  }
 }
 
 .input__label {
+  padding-left: 46px;
   color: variables.$title-color-primery;
   font-weight: 700;
   font-size: 18px;
