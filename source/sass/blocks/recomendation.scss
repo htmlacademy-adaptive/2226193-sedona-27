@@ -122,6 +122,7 @@
 
 .recomendation__title {
   padding-top: 8px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small();
   text-align: left;
 
@@ -129,22 +130,15 @@
     @include mixins.title();
     text-align: center;
   }
-
-  @media (min-width: variables.$desktop-width) {
-
-  }
 }
 
 .recomendation__text {
   padding-top: 16px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: left;
 
   @media (min-width: variables.$tablet-width) {
     text-align: center;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-
   }
 }

@@ -7,6 +7,7 @@
 
 .form-block__title {
   margin-bottom: 20px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small();
   text-align: center;
 }
@@ -14,6 +15,7 @@
 .form-block__fields {
   margin: 0;
   padding: 0;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: left;
 }

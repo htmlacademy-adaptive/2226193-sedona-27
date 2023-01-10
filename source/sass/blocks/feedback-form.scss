@@ -13,7 +13,6 @@
 }
 
 .feedback-form__container {
-
   @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: center;
@@ -25,11 +24,10 @@
   padding: 50px 0 30px;
 
   @media (min-width: variables.$tablet-width) {
-
     &--column {
       padding: 0 43px 75px;
 
-      &:first-child:after {
+      &:first-child::after {
         position: absolute;
         content: "";
         width: 1px;
@@ -83,10 +81,6 @@
     width: 768px;
     margin: 0 auto;
   }
-}
-
-.feedback-form__button {
-
 }
 
 .feedback-form__footnote {

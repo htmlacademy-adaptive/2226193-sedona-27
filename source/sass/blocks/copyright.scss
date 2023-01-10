@@ -1,10 +1,6 @@
 @use "global/variables";
 @use "global/mixins";
 
-.copyright {
-
-}
-
 .copyright__link {
   display: flex;
   align-items: center;
@@ -22,6 +18,7 @@
 
 .copyright__text {
   margin-right: 12px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text(variables.$title-color-primery);
 }
 

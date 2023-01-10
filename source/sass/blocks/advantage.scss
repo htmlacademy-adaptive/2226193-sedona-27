@@ -86,6 +86,7 @@
 
 .advantage__title {
   margin-bottom: 11px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small(variables.$title-color-secondary);
   text-align: center;
 
@@ -106,6 +107,7 @@
 
 .advantage__number {
   margin-bottom: 17px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text(variables.$text-color-secondary);
   text-align: center;
 
@@ -154,9 +156,5 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-
   }
 }
