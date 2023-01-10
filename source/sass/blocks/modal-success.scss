@@ -1,7 +1,6 @@
 @use "global/variables";
 
 .modal-success {
-
   @media (min-width: variables.$tablet-width) {
     width: 640px;
   }

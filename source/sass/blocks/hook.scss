@@ -18,17 +18,20 @@
 
 .hook__title {
   margin-bottom: 25px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title();
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 30px;
+    /* stylelint-disable-next-line at-rule-empty-line-before */
     @include mixins.title-big();
   }
 }
 
 .hook__text {
   margin-bottom: 32px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: center;
 
@@ -38,6 +41,12 @@
 
   @media (min-width: variables.$desktop-width) {
     margin-bottom: 45px;
+  }
+}
+
+.hook__text br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
   }
 }
 

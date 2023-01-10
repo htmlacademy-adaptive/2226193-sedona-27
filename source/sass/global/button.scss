@@ -14,6 +14,19 @@
 
   &--primary {
     background-color: variables.$background-color-secondary;
+
+    &:hover {
+      background-color: variables.$background-color-hover;
+    }
+
+    &:active {
+      background-color: variables.$background-color-active;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+      color: #ffffff;
+    }
   }
 }
-

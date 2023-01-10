@@ -2,52 +2,91 @@
 @use "global/mixins";
 
 .advantage {
-  overflow: hidden;
+
   background-color: variables.$background-color-secondary;
   box-sizing: border-box;
 
-  @media (min-width: variables.$tablet-width) {
-
+  &--city {
+    padding: 33px 18px 40px;
   }
 
-  @media (min-width: variables.$desktop-width) {
-
+  &--bridge {
+    padding: 37px 18px;
   }
 
   &--briefly {
     padding: 24px 0;
     background-color: variables.$background-color-tertiary;
 
-    @media (min-width: variables.$tablet-width) {
-      flex-direction: column;
-      width: 256px;
-      padding: 52px 33px;
-    }
+    @media (max-width: variables.$mobile-width-only) {
+      &::after {
+        content: "";
+        position: absolute;
+        margin: 18px;
+        width: 284px;
+        border-bottom: 1px solid #d6d6d6;
+      }
 
-    @media (min-width: variables.$desktop-width) {
-      width: 400px;
-      padding: 63px 50px;
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
-}
 
-.advantage__container {
+  &--briefly br {
+    @media (max-width: variables.$mobile-width-only) {
+      display: none;
+    }
+  }
+
   @media (min-width: variables.$tablet-width) {
-    @include mixins.flex(column);
-    justify-content: center;
     width: 256px;
-    padding: 51px 33px 31px;
+    padding: 52px 33px 31px;
     box-sizing: border-box;
+
+    &--briefly {
+      height: 256px;
+      padding: 41px 33px;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 400px;
     padding: 52px 50px 51px;
+
+    &--briefly {
+      padding: 63px 25px 41px;
+    }
+
+    &--city {
+      padding: 52px 60px 51px;
+    }
+
+    &--bridge {
+      padding: 52px 85px 51px;
+    }
+  }
+}
+
+.advantage__container {
+  overflow: hidden;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    &:nth-child(2n) {
+      flex-direction: row;
+    }
   }
 }
 
 .advantage__title {
   margin-bottom: 11px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small(variables.$title-color-secondary);
   text-align: center;
 
@@ -60,8 +99,15 @@
   }
 }
 
+.advantage__title br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
 .advantage__number {
   margin-bottom: 17px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text(variables.$text-color-secondary);
   text-align: center;
 
@@ -79,6 +125,7 @@
   }
 
   &--briefly {
+    padding: 0 32px;
     color: variables.$text-color-primery;
   }
 }
@@ -102,16 +149,12 @@
 
 .advantage__recomendations {
   margin: 0;
-  padding: 23px 47px 46px;
+  padding: 23px 18px 46px 65px;
   list-style: none;
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-
   }
 }
