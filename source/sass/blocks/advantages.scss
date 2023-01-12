@@ -5,20 +5,12 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  @media (min-width: variables.$desktop-width) {
-
-  }
 }
 
 .advantages__item {
   @media (min-width: variables.$tablet-width) {
     display: flex;
-    flex-wrap: wrap;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-
+    flex-direction: column;
+    justify-content: center;
   }
 }
-

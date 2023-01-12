@@ -1,12 +1,9 @@
 @use "global/variables";
 @use "global/mixins";
 
-.hero-description {
-
-}
-
 .hero-description__title {
   margin-bottom: 35px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small();
   text-align: center;
 
@@ -15,7 +12,6 @@
   }
 
   &--index {
-
     @media (min-width: variables.$tablet-width) {
       @include mixins.title();
     }
@@ -25,4 +21,10 @@
 .hero-description__text {
   @include mixins.text();
   text-align: center;
+}
+
+.hero-description__text br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
 }

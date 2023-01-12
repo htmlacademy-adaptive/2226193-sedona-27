@@ -1,20 +1,16 @@
 @use "global/variables";
 
-.page {
-
-}
-
 .page__body {
   margin: 0;
+  background-color: #f2f2f2;
 }
 
 .page__container {
-  /* display: flex;
-  flex-direction: column; */
   margin: 0 auto;
   min-height: 100%;
   max-width: 320px;
   background-color: variables.$background-color-primery;
+  box-shadow: 0 5px 15px 0 rgba(#000101, 0.2);
 
   @media (min-width: variables.$tablet-width) {
     max-width: variables.$tablet-width;

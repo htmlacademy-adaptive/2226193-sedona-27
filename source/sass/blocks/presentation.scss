@@ -22,6 +22,7 @@
 
 .presentation__text {
   padding: 40px 7px 38px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: center;
 
@@ -32,8 +33,4 @@
   @media (min-width: variables.$desktop-width) {
     padding: 40px 177px 84px;
   }
-}
-
-.presentation__video {
-
 }

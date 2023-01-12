@@ -1,17 +1,31 @@
 @use "global/variables";
 @use "global/mixins";
 
-.copyright {
-
-}
-
 .copyright__link {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: variables.$title-color-primery;
+
+  &:hover {
+    color: variables.$title-color-hover;
+  }
+
+  &:active {
+    color: variables.$title-color-active;
+  }
 }
 
 .copyright__text {
   margin-right: 12px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text(variables.$title-color-primery);
+}
+
+.copyright__link:hover > .copyright__text {
+  color: variables.$title-color-hover;
+}
+
+.copyright__link:active > .copyright__text {
+  color: variables.$title-color-active;
 }

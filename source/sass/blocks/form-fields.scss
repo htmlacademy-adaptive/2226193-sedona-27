@@ -7,7 +7,15 @@
     @media (min-width: variables.$tablet-width) {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      max-width: 576px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 16px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      max-width: 960px;
+      gap: 28px;
     }
   }
 
@@ -15,15 +23,32 @@
     @media (min-width: variables.$tablet-width) {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 32px 16px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      max-width: 960px;
+      gap: 32px 64px;
     }
   }
 }
 
 .form-fields__item {
-  margin-bottom: 16px;
+  width: 280px;
+  margin-bottom: 36px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 430px;
+
+    &--contacts {
+      width: 402px;
+    }
   }
 }

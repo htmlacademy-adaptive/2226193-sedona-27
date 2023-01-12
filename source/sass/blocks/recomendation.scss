@@ -2,54 +2,127 @@
 @use "global/mixins";
 
 .recomendation {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    top: 0;
+    left: -47px;
+  }
 
   @media (min-width: variables.$tablet-width) {
     width: 190px;
+    box-sizing: border-box;
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
-
+    width: 300px;
   }
 
   &--house {
-
+    &::before {
+      background-image: url("/img/index/recommendations_icons/icon-house.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     @media (min-width: variables.$tablet-width) {
-      padding: 60px 33px;
+      padding-top: 72px + 26px;
+
+      &::before {
+        width: 77px;
+        height: 72px;
+        background-size: contain;
+      }
     }
 
     @media (min-width: variables.$desktop-width) {
-      padding: 69px 50px;
+      padding-top: 72px + 28px;
+
+      &::before {
+        width: 79px;
+        height: 72px;
+        background-size: contain;
+      }
     }
   }
 
   &--food {
-
+    &::before {
+      background-image: url("/img/index/recommendations_icons/icon-burger.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     @media (min-width: variables.$tablet-width) {
-      padding: 62px 33px 61px;
+      padding-top: 68px + 26px;
+
+      &::before {
+        width: 80px;
+        height: 68px;
+        background-size: contain;
+      }
     }
 
     @media (min-width: variables.$desktop-width) {
-      padding: 72px 50px 71px;
+      padding-top: 69px + 25px;
+
+      &::before {
+        width: 73px;
+        height: 69px;
+        background-size: contain;
+      }
     }
   }
 
   &--gift {
-
+    &::before {
+      background-image: url("/img/index/recommendations_icons/icon-gift.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     @media (min-width: variables.$tablet-width) {
-      padding: 64px 33px;
+      padding-top: 75px + 14px;
+
+      &::before {
+        width: 66px;
+        height: 75px;
+        background-size: contain;
+      }
     }
 
     @media (min-width: variables.$desktop-width) {
-      padding: 69px 50px 67px;
+      padding-top: 75px + 26px;
+
+      &::before {
+        width: 77px;
+        height: 75px;
+        background-size: contain;
+      }
     }
   }
 }
 
+.recomendation br {
+  @media (max-width: variables.$mobile-width-only) {
+    display: none;
+  }
+}
+
 .recomendation__title {
-  margin-bottom: 16px;
+  padding-top: 8px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small();
   text-align: left;
 
@@ -57,21 +130,15 @@
     @include mixins.title();
     text-align: center;
   }
-
-  @media (min-width: variables.$desktop-width) {
-
-  }
 }
 
 .recomendation__text {
+  padding-top: 16px;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: left;
 
   @media (min-width: variables.$tablet-width) {
     text-align: center;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-
   }
 }
