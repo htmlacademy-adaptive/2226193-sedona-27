@@ -6,14 +6,18 @@
   position: relative;
   padding: 52px 0 67px;
   background-color: variables.$background-color-secondary;
-  background-image: url("/img/background_x1.jpg");
+  background-image: url("/img/background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
   &--index {
-    padding: 90px 0;
+    padding: 84px 0;
     background-position: center;
-    background-size: cover;
   }
 
   &::after {
@@ -27,6 +31,26 @@
     transform: translateX(-50%);
     bottom: 0;
     content: "";
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    background-image: url("/img/background-tablet.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/background-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-image: url("/img/background-desktop.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/background-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 
