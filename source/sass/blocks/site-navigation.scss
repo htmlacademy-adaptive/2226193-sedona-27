@@ -6,6 +6,88 @@
   width: 100%;
   min-height: 56px;
   background-color: variables.$background-color-primery;
+
+  &--closed .site-navigation__toggle {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 23px;
+      height: 4px;
+      background-color: variables.$background-color-secondary;
+      box-shadow: 0 9px 0 0 variables.$background-color-secondary, 0 18px 0 0 variables.$background-color-secondary;
+    }
+
+    &:hover::before {
+      background-color: rgba(variables.$background-color-secondary, 0.6);
+      box-shadow:
+        0 9px 0 0 rgba(variables.$background-color-secondary, 0.6),
+        0 18px 0 0 rgba(variables.$background-color-secondary, 0.6);
+    }
+
+    &:active::before {
+      background-color: rgba(variables.$background-color-secondary, 0.3);
+      box-shadow:
+        0 9px 0 0 rgba(variables.$background-color-secondary, 0.3),
+        0 18px 0 0 rgba(variables.$background-color-secondary, 0.3);
+    }
+  }
+
+  &--opened .site-navigation__toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: -2px;
+      width: 27px;
+      height: 4px;
+      background-color: variables.$background-color-primery;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: rgba(variables.$background-color-primery, 0.6);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba(variables.$background-color-primery, 0.3);
+    }
+  }
+
+  @media (max-width: variables.$mobile-width-only) {
+    &--closed .site-navigation__container {
+      display: none;
+    }
+
+    &--opened .site-navigation__container {
+      display: block;
+    }
+
+    &--nojs .site-navigation__toggle {
+      display: none;
+    }
+
+    &--nojs .site-navigation__container {
+      position: static;
+      min-height: 0;
+    }
+
+    &--nojs .site-navigation__logo {
+      display: none;
+    }
+  }
 }
 
 .site-navigation__logo {
@@ -29,86 +111,6 @@
 
   @media (min-width: variables.$tablet-width) {
     display: none;
-  }
-}
-
-.site-navigation--closed .site-navigation__toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 23px;
-  height: 4px;
-  background-color: variables.$background-color-secondary;
-  box-shadow: 0 9px 0 0 variables.$background-color-secondary, 0 18px 0 0 variables.$background-color-secondary;
-}
-
-.site-navigation--closed .site-navigation__toggle:hover::before {
-  background-color: rgba(variables.$background-color-secondary, 0.6);
-  box-shadow:
-    0 9px 0 0 rgba(variables.$background-color-secondary, 0.6),
-    0 18px 0 0 rgba(variables.$background-color-secondary, 0.6);
-}
-
-.site-navigation--closed .site-navigation__toggle:active::before {
-  background-color: rgba(variables.$background-color-secondary, 0.3);
-  box-shadow:
-    0 9px 0 0 rgba(variables.$background-color-secondary, 0.3),
-    0 18px 0 0 rgba(variables.$background-color-secondary, 0.3);
-}
-
-@media (max-width: variables.$mobile-width-only) {
-  .site-navigation--closed .site-navigation__container {
-    display: none;
-  }
-
-  .site-navigation--opened .site-navigation__container {
-    display: block;
-  }
-
-  .site-navigation--nojs .site-navigation__toggle {
-    display: none;
-  }
-
-  .site-navigation--nojs .site-navigation__container {
-    position: static;
-    min-height: 0;
-  }
-
-  .site-navigation--nojs .site-navigation__logo {
-    display: none;
-  }
-}
-
-.site-navigation--opened .site-navigation__toggle {
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 9px;
-    right: -2px;
-    width: 27px;
-    height: 4px;
-    background-color: variables.$background-color-primery;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:hover::before,
-  &:hover::after {
-    background-color: rgba(variables.$background-color-primery, 0.6);
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: rgba(variables.$background-color-primery, 0.3);
   }
 }
 

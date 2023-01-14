@@ -7,6 +7,20 @@
   }
 }
 
+.advantages__advantage-container {
+  overflow: hidden;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    &:nth-child(2n) {
+      flex-direction: row;
+    }
+  }
+}
+
 .advantages__item {
   @media (min-width: variables.$tablet-width) {
     display: flex;

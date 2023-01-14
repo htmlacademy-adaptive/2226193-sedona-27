@@ -87,32 +87,8 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 11px;
-  height: 30px;
-  background-image: url("/img/catalog/like-icon.svg");
-  background-repeat: no-repeat;
-  background-size: 23px 21px;
-  background-position: left top;
 
   @media (min-width: variables.$tablet-width) {
     margin: 0;
-  }
-}
-
-.card__likes {
-  padding-left: 37px;
-  background-color: transparent;
-  border: none;
-  color: variables.$title-color-primery;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: left;
-
-  @media (min-width: variables.$tablet-width) {
-    padding-left: 32px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    color: variables.$title-color-secondary;
   }
 }

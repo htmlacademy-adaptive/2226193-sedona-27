@@ -6,6 +6,8 @@
   flex-direction: column;
 
   &--radio {
+    padding: 10px 0;
+
     @media (min-width: variables.$tablet-width) {
       flex-direction: row;
       width: 280px;
@@ -13,6 +15,8 @@
   }
 
   &--checkbox {
+    padding: 10px 0;
+
     @media (min-width: variables.$tablet-width) {
       flex-direction: row;
       width: 224px;

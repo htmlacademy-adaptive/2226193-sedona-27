@@ -1,0 +1,36 @@
+@use "global/variables";
+
+.likes {
+  height: 30px;
+}
+
+.likes__icon {
+  background-color: transparent;
+  border: none;
+  align-self: flex-start;
+  opacity: 0.3;
+
+
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$title-color-secondary;
+    opacity: 1;
+  }
+}
+
+.likes__number {
+  padding-left: 10px;
+
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 9px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: variables.$title-color-secondary;
+  }
+}
