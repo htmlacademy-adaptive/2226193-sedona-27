@@ -1,37 +1,20 @@
+@use "global/variables";
+
 .form-control {
   position: relative;
 
-  &--phone {
-    &::before {
+  &--with-icon {
+    &::after {
       position: absolute;
       content: "";
       right: 0;
       width: 58px;
       height: 58px;
       background-color: #e6e6e6;
-      background-image: url("/img/form/phone.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 18px 18px;
     }
   }
 
-  &--email {
-    &::before {
-      position: absolute;
-      content: "";
-      right: 0;
-      width: 58px;
-      height: 58px;
-      background-color: #e6e6e6;
-      background-image: url("/img/form/mail.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 16px 12px;
-    }
-  }
-
-  &:checked + .input__mark::after {
+  &:checked + .form-control__mark::after {
     position: absolute;
     content: "";
     top: 15px;
@@ -41,7 +24,7 @@
     background: url("/img/form/tick.svg") no-repeat center;
   }
 
-  &:checked + .input__mark--radio::after {
+  &:checked + .form-control__mark--radio::after {
     position: absolute;
     top: 15px;
     left: 15px;
@@ -51,4 +34,27 @@
     background-color: #333333;
     content: "";
   }
+}
+
+.form-control__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: variables.$background-color-input;
+
+  &--radio {
+    border-radius: 50%;
+  }
+}
+
+.form-control__label {
+  padding-left: 46px;
+  color: variables.$title-color-primery;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
 }

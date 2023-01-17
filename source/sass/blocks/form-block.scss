@@ -2,14 +2,22 @@
 @use "global/mixins";
 
 .form-block {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .form-block__title {
-  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
   /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small();
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 28px;
+  }
 }
 
 .form-block__fields {

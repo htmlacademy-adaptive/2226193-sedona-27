@@ -12,3 +12,15 @@ navToggle.addEventListener('click', function () {
     siteNav.classList.remove('site-navigation--opened');
   }
 });
+
+let formBtn = document.querySelector('.feedback-form__button');
+let modal = document.querySelector('.modal__container');
+let modalBtn = document.querySelector('.modal__button');
+
+formBtn.addEventListener('click', function () {
+  modal.classList.remove('modal__container--closed');
+});
+
+modalBtn.addEventListener('click', function () {
+  modal.classList.add('modal__container--closed');
+});

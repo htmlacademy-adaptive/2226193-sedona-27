@@ -1,1 +1,9 @@
-/* удалить если не наполнится */
+@use "global/variables";
+
+.feedback__form {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

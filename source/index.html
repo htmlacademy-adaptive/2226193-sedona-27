@@ -15,7 +15,7 @@
       <header class="header">
         <nav class="site-navigation site-navigation--closed site-navigation--nojs">
           <a class="site-navigation__logo" href="index.html">
-            <img src="img/header/logo.svg" width="185" height="96" alt="Логотип Седоны.">
+            <img src="img/logo.svg" width="185" height="96" alt="Логотип Седоны.">
           </a>
           <button class="site-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню сайта</span>
@@ -53,7 +53,7 @@
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
-          <div class="advantage__container">
+          <div class="advantages__advantage-container">
             <div class="advantages__item advantage advantage--city">
               <h3 class="advantage__title">Настоящий<br> городок</h3>
               <p class="advantage__number">— №1 —</p>
@@ -85,7 +85,7 @@
               </li>
             </ul>
           </div>
-          <div class="advantage__container">
+          <div class="advantages__advantage-container">
             <div class="advantages__item advantage advantage--bridge">
               <h3 class="advantage__title">Там есть<br> Мост Дьявола</h3>
               <p class="advantage__number">— №2 —</p>
@@ -133,27 +133,35 @@
       <footer class="footer">
         <p class="footer__tag footer-tag">#visitsedona</p>
         <ul class="footer__social social">
-          <li class="social__item social__item--vkontakte">
+          <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy">
+              <svg class="social__icon" aria-hidden="true" focusable="false" width="24" height="14" viewBox="0 0 24 14">
+                <use href="./img/sprite.svg#vkontakte" />
+              </svg>
               <span class="visually-hidden">Мы в Вконтакте</span>
             </a>
           </li>
-          <li class="social__item social__item--telegram">
+          <li class="social__item">
             <a class="social__link" href="https://t.me/htmlacademy">
+              <svg class="social__icon" aria-hidden="true" focusable="false" width="22" height="18" viewBox="0 0 22 18">
+                <use href="./img/sprite.svg#telegram" />
+              </svg>
               <span class="visually-hidden">Мы в Телеграме</span>
             </a>
           </li>
-          <li class="social__item social__item--youtube">
+          <li class="social__item">
             <a class="social__link" href="https://www.youtube.com/htmlacademy">
+              <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="14" viewBox="0 0 20 14">
+                <use href="./img/sprite.svg#youtube" />
+              </svg>
               <span class="visually-hidden">Мы в Ютубе</span>
             </a>
           </li>
         </ul>
         <div class="footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="copyright__text">Разработано</p>
-            <svg aria-hidden="true" focusable="false" aria-label="htmlacademy" xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="currentcolor" viewBox="0 0 27 35">
-              <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+            <svg class="copyright__icon" aria-hidden="true" focusable="false" aria-label="htmlacademy" width="27" height="35" viewBox="0 0 27 35">
+              <use href="./img/sprite.svg#htmlacademy" />
             </svg>
           </a>
         </div>
