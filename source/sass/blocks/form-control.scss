@@ -4,13 +4,37 @@
   position: relative;
 
   &--with-icon {
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       right: 0;
       width: 58px;
       height: 58px;
       background-color: #e6e6e6;
+    }
+  }
+
+  &--phone {
+    &::after {
+      position: absolute;
+      content: "";
+      right: 20px;
+      top: 20px;
+      width: 18px;
+      height: 18px;
+      background: url("/img/sprite.svg#icon-phone") no-repeat center;
+    }
+  }
+
+  &--email {
+    &::after {
+      position: absolute;
+      content: "";
+      right: 21px;
+      top: 23px;
+      width: 16px;
+      height: 12px;
+      background: url("/img/sprite.svg#icon-mail") no-repeat center;
     }
   }
 
@@ -21,7 +45,7 @@
     left: 12px;
     width: 22px;
     height: 16px;
-    background: url("/img/form/tick.svg") no-repeat center;
+    background: url("/img/sprite.svg#icon-tick") no-repeat center;
   }
 
   &:checked + .form-control__mark--radio::after {
