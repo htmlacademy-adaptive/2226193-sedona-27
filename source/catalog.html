@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -47,13 +47,16 @@
           </div>
           <div class="hero__description hero-description">
             <h1 class="hero-description__title">Фото и видео</h1>
-            <p class="hero-description__text">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о политике и экономике.</p>
+            <p class="hero-description__text">Не можете решиться на путешествие из-за курса?&nbsp;<br> Фотографии помогут вам забыть о политике и экономике.</p>
           </div>
         </section>
         <section class="gallery">
           <ul class="cards">
             <li class="cards__item card">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-1-desktop.webp 1x, /img/index/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-1-tablet.webp 1x, /img/index/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="/img/index/photo-1-mobile.webp 1x, /img/index/photo-1-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="/img/catalog/photo-1-desktop.jpg 1x, /img/catalog/photo-1-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="/img/catalog/photo-1-tablet.jpg 1x, /img/catalog/photo-1-tablet@2x.jpg 2x">
                 <img class="card__image card__image--first" src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Уходящая вдаль дорога на фоне гор.">
@@ -66,7 +69,7 @@
                 <span class="card__likes-container likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
-                      <use href="./img/sprite.svg#like" />
+                      <use href="./img/sprite.svg#icon-like" />
                     </svg>
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
@@ -76,6 +79,9 @@
             </li>
             <li class="cards__item card">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-2-desktop.webp 1x, /img/index/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-2-tablet.webp 1x, /img/index/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="/img/index/photo-2-mobile.webp 1x, /img/index/photo-2-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="/img/catalog/photo-2-desktop.jpg 1x, /img/catalog/photo-2-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="/img/catalog/photo-2-tablet.jpg 1x, /img/catalog/photo-2-tablet@2x.jpg 2x">
                 <img class="card__image" src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Цветущий кактус и горы на заднем плане.">
@@ -88,7 +94,7 @@
                 <span class="card__likes-container likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
-                      <use href="./img/sprite.svg#like" />
+                      <use href="./img/sprite.svg#icon-like" />
                     </svg>
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
@@ -98,6 +104,9 @@
             </li>
             <li class="cards__item card">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-3-desktop.webp 1x, /img/index/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-3-tablet.webp 1x, /img/index/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="/img/index/photo-3-mobile.webp 1x, /img/index/photo-3-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="/img/catalog/photo-3-desktop.jpg 1x, /img/catalog/photo-3-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="/img/catalog/photo-3-tablet.jpg 1x, /img/catalog/photo-3-tablet@2x.jpg 2x">
                 <img class="card__image" src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорожный серпантин среди лесов.">
@@ -110,7 +119,7 @@
                 <span class="card__likes-container likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
-                      <use href="./img/sprite.svg#like" />
+                      <use href="./img/sprite.svg#icon-like" />
                     </svg>
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
@@ -120,6 +129,9 @@
             </li>
             <li class="cards__item card">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-4-desktop.webp 1x, /img/index/photo-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-4-tablet.webp 1x, /img/index/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="/img/index/photo-4-mobile.webp 1x, /img/index/photo-4-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="/img/catalog/photo-4-desktop.jpg 1x, /img/catalog/photo-4-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="/img/catalog/photo-4-tablet.jpg 1x, /img/catalog/photo-4-tablet@2x.jpg 2x">
                 <img class="card__image" src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Cкальный выступ, ведущий к обрыву с живописным видом.">
@@ -132,7 +144,7 @@
                 <span class="card__likes-container likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
-                      <use href="./img/sprite.svg#like" />
+                      <use href="./img/sprite.svg#icon-like" />
                     </svg>
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
@@ -160,7 +172,7 @@
           <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy">
               <svg class="social__icon" aria-hidden="true" focusable="false" width="24" height="14" viewBox="0 0 24 14">
-                <use href="./img/sprite.svg#vkontakte" />
+                <use href="./img/sprite.svg#icon-vkontakte" />
               </svg>
               <span class="visually-hidden">Мы в Вконтакте</span>
             </a>
@@ -168,7 +180,7 @@
           <li class="social__item">
             <a class="social__link" href="https://t.me/htmlacademy">
               <svg class="social__icon" aria-hidden="true" focusable="false" width="22" height="18" viewBox="0 0 22 18">
-                <use href="./img/sprite.svg#telegram" />
+                <use href="./img/sprite.svg#icon-telegram" />
               </svg>
               <span class="visually-hidden">Мы в Телеграме</span>
             </a>
@@ -176,7 +188,7 @@
           <li class="social__item">
             <a class="social__link" href="https://www.youtube.com/htmlacademy">
               <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="14" viewBox="0 0 20 14">
-                <use href="./img/sprite.svg#youtube" />
+                <use href="./img/sprite.svg#icon-youtube" />
               </svg>
               <span class="visually-hidden">Мы в Ютубе</span>
             </a>
@@ -185,7 +197,7 @@
         <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
             <svg class="copyright__icon" aria-hidden="true" focusable="false" aria-label="htmlacademy" width="27" height="35" viewBox="0 0 27 35">
-              <use href="./img/sprite.svg#htmlacademy" />
+              <use href="./img/sprite.svg#icon-htmlacademy-logo" />
             </svg>
           </a>
         </div>

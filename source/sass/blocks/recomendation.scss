@@ -31,7 +31,7 @@
 
   &--house {
     &::before {
-      background-image: url("/img/index/recommendations_icons/icon-house.svg");
+      background-image: url("/img/sprite.svg#icon-house");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -59,7 +59,7 @@
 
   &--food {
     &::before {
-      background-image: url("/img/index/recommendations_icons/icon-burger.svg");
+      background-image: url("/img/sprite.svg#icon-burger");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -87,7 +87,7 @@
 
   &--gift {
     &::before {
-      background-image: url("/img/index/recommendations_icons/icon-gift.svg");
+      background-image: url("/img/sprite.svg#icon-gift");
       background-repeat: no-repeat;
       background-position: center;
     }
