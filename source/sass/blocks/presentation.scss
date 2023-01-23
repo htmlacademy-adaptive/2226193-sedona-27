@@ -7,30 +7,37 @@
   padding: 17px 20px 0;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 58px 60px 40px;
+    padding: 57px 60px 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 62px 200px 60px;
+    padding: 61px 200px 77px;
   }
 }
 
 .presentation__title {
-  @include mixins.title();
+  margin: 0;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
+  @include mixins.title-small();
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.title-big();
+  }
 }
 
 .presentation__text {
-  padding: 40px 7px 38px;
+  margin: 0;
+  padding: 28px 10px 38px;
   /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 40px 101px 86px;
+    padding: 31px 101px 90px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 40px 177px 84px;
+    padding: 31px 170px 86px;
   }
 }

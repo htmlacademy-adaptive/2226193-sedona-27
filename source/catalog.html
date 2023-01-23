@@ -2,6 +2,10 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/js/script.js" as="script">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -51,22 +55,23 @@
           </div>
         </section>
         <section class="gallery">
+          <h2 class="visually-hidden">Фотогалерея</h2>
           <ul class="cards">
             <li class="cards__item card">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-1-desktop.webp 1x, /img/index/photo-1-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-1-tablet.webp 1x, /img/index/photo-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="/img/index/photo-1-mobile.webp 1x, /img/index/photo-1-mobile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="/img/catalog/photo-1-desktop.jpg 1x, /img/catalog/photo-1-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="/img/catalog/photo-1-tablet.jpg 1x, /img/catalog/photo-1-tablet@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-1-desktop.webp 1x, img/catalog/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/photo-1-tablet.webp 1x, img/catalog/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/photo-1-mobile.webp 1x, img/catalog/photo-1-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/photo-1-tablet.jpg 1x, img/catalog/photo-1-tablet@2x.jpg 2x">
                 <img class="card__image card__image--first" src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Уходящая вдаль дорога на фоне гор.">
               </picture>
-              <div class="card__info">
-                <span class="card__description">
+              <div class="card__info card__info--first">
+                <div class="card__description">
                   <p class="card__title">Неродные просторы</p>
                   <p class="card__author">Автор фото: Борис</p>
-                </span>
-                <span class="card__likes-container likes">
+                </div>
+                <div class="card__likes-container card__likes-container--first likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
                       <use href="./img/sprite.svg#icon-like" />
@@ -74,24 +79,24 @@
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
                   <p class="likes__number">1350</p>
-                </span>
+                </div>
               </div>
             </li>
             <li class="cards__item card">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-2-desktop.webp 1x, /img/index/photo-2-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-2-tablet.webp 1x, /img/index/photo-2-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="/img/index/photo-2-mobile.webp 1x, /img/index/photo-2-mobile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="/img/catalog/photo-2-desktop.jpg 1x, /img/catalog/photo-2-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="/img/catalog/photo-2-tablet.jpg 1x, /img/catalog/photo-2-tablet@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-2-desktop.webp 1x, img/catalog/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/photo-2-tablet.webp 1x, img/catalog/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/photo-2-mobile.webp 1x, img/catalog/photo-2-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/photo-2-tablet.jpg 1x, img/catalog/photo-2-tablet@2x.jpg 2x">
                 <img class="card__image" src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Цветущий кактус и горы на заднем плане.">
               </picture>
               <div class="card__info">
-                <span class="card__description">
+                <div class="card__description">
                   <p class="card__title">Местная растительность</p>
                   <p class="card__author">Автор фото: Сергей</p>
-                </span>
-                <span class="card__likes-container likes">
+                </div>
+                <div class="card__likes-container likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
                       <use href="./img/sprite.svg#icon-like" />
@@ -99,24 +104,24 @@
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
                   <p class="likes__number">143</p>
-                </span>
+                </div>
               </div>
             </li>
             <li class="cards__item card">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-3-desktop.webp 1x, /img/index/photo-3-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-3-tablet.webp 1x, /img/index/photo-3-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="/img/index/photo-3-mobile.webp 1x, /img/index/photo-3-mobile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="/img/catalog/photo-3-desktop.jpg 1x, /img/catalog/photo-3-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="/img/catalog/photo-3-tablet.jpg 1x, /img/catalog/photo-3-tablet@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-3-desktop.webp 1x, img/catalog/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/photo-3-tablet.webp 1x, img/catalog/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/photo-3-mobile.webp 1x, img/catalog/photo-3-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/photo-3-tablet.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x">
                 <img class="card__image" src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Дорожный серпантин среди лесов.">
               </picture>
               <div class="card__info">
-                <span class="card__description">
+                <div class="card__description">
                   <p class="card__title">Дорога на север</p>
                   <p class="card__author">Автор фото: Петр</p>
-                </span>
-                <span class="card__likes-container likes">
+                </div>
+                <div class="card__likes-container likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
                       <use href="./img/sprite.svg#icon-like" />
@@ -124,24 +129,24 @@
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
                   <p class="likes__number">96</p>
-                </span>
+                </div>
               </div>
             </li>
             <li class="cards__item card">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="/img/index/photo-4-desktop.webp 1x, /img/index/photo-4-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="/img/index/photo-4-tablet.webp 1x, /img/index/photo-4-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="/img/index/photo-4-mobile.webp 1x, /img/index/photo-4-mobile@2x.webp 2x">
-                <source media="(min-width: 1200px)" srcset="/img/catalog/photo-4-desktop.jpg 1x, /img/catalog/photo-4-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="/img/catalog/photo-4-tablet.jpg 1x, /img/catalog/photo-4-tablet@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop.webp 1x, img/catalog/photo-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/photo-4-tablet.webp 1x, img/catalog/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/photo-4-mobile.webp 1x, img/catalog/photo-4-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/photo-4-tablet.jpg 1x, img/catalog/photo-4-tablet@2x.jpg 2x">
                 <img class="card__image" src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Cкальный выступ, ведущий к обрыву с живописным видом.">
               </picture>
               <div class="card__info">
-                <span class="card__description">
+                <div class="card__description">
                   <p class="card__title">Мост дьявола</p>
                   <p class="card__author">Автор фото: Антон</p>
-                </span>
-                <span class="card__likes-container likes">
+                </div>
+                <div class="card__likes-container likes">
                   <button class="likes__icon" type="submit">
                     <svg aria-hidden="true" focusable="false" width="23" height="21" viewBox="0 0 23 21">
                       <use href="./img/sprite.svg#icon-like" />
@@ -149,7 +154,7 @@
                     <span class="visually-hidden">Поставить лайк</span>
                   </button>
                   <p class="likes__number">254</p>
-                </span>
+                </div>
               </div>
             </li>
           </ul>
@@ -162,7 +167,14 @@
             <button class="video__button">
               <span class="visually-hidden">Воспроизвести</span>
             </button>
-            <video class="video__container" poster="img/catalog/video-desktop.jpg">Ваш браузер не поддерживает отображение видео.</video>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/video-desktop.webp 1x, img/catalog/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/video-tablet.webp 1x, img/catalog/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/video-mobile.webp 1x, img/catalog/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x">
+              <img class="video__preview" src="img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" width="280" height="280" alt="Cкальный выступ, ведущий к обрыву с живописным видом.">
+            </picture>
           </div>
         </section>
       </main>

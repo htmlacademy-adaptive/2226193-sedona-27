@@ -2,29 +2,53 @@
 @use "global/mixins";
 
 .hero-description__title {
-  margin-bottom: 35px;
+  margin: 0 0 25px 0;
   /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title-small();
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
+    margin-bottom: 32px;
+    /* stylelint-disable-next-line at-rule-empty-line-before */
     @include mixins.title-big();
   }
 
   &--index {
+    margin-bottom: 37px;
+
     @media (min-width: variables.$tablet-width) {
+      margin-bottom: 29px;
+      /* stylelint-disable-next-line at-rule-empty-line-before */
       @include mixins.title();
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--form {
+    margin-bottom: 24px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-bottom: 32px;
     }
   }
 }
 
 .hero-description__text {
+  margin: 0;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: center;
-}
 
-.hero-description__text br {
-  @media (max-width: variables.$mobile-width-only) {
-    display: none;
+  br {
+    @media (max-width: variables.$mobile-width-only) {
+      display: none;
+    }
   }
 }
