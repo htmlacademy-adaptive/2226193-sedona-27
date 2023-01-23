@@ -16,6 +16,7 @@
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
+    @include mixins.title();
     padding-bottom: 28px;
   }
 }

@@ -2,6 +2,10 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/js/script.js" as="script">
+    <link rel="preload" href="/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -45,14 +49,15 @@
             <img class="hero__image" src="img/hero-text.svg" alt="" width="229" height="39">
             <p class="visually-hidden">Sedona.</p>
           </div>
-          <div class="hero__description hero-description">
-            <h1 class="hero-description__title">Оставьте свой отзыв</h1>
+          <div class="hero__description hero__description--form hero-description">
+            <h1 class="hero-description__title hero-description__title--form">Оставьте свой отзыв</h1>
             <p class="hero-description__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них,&nbsp;<br> а также о посещенных вами достопримечательностях</p>
           </div>
         </section>
         <section class="feedback">
+          <h2 class="visually-hidden">Форма отзыва</h2>
           <form class="feedback__form feedback-form" action="#" method="POST">
-            <div class="feedback-form__item feedback-form__item--column">
+            <div class="feedback-form__item feedback-form__item--name feedback-form__item--column">
               <fieldset class="form-block">
                 <legend class="form-block__title">Представьтесь:</legend>
                 <ul class="form-block__fields form-fields">
@@ -71,10 +76,10 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback-form__item feedback-form__item--column">
+            <div class="feedback-form__item feedback-form__item--contacts feedback-form__item--column">
               <fieldset class="form-block">
                 <legend class="form-block__title">Контактная информация:</legend>
-                <ul class="form-block__fields form-fields">
+                <ul class="form-block__fields form-fields form-fields--right">
                   <li class="form-fields__item form-fields__item--contacts form-field">
                     <label class="form-field__title" for="feedback-form-recipient-phone">Контактный телефон*:</label>
                     <span class="form-control form-control--with-icon form-control--phone">
@@ -90,7 +95,7 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback-form__item feedback-form__item--row">
+            <div class="feedback-form__item feedback-form__item--impression feedback-form__item--row">
               <fieldset class="form-block">
                 <legend class="form-block__title">Ваше общее впечатление:</legend>
                 <ul class="form-block__fields form-fields form-fields--radios">
@@ -118,35 +123,35 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback-form__item feedback-form__item--row">
+            <div class="feedback-form__item feedback-form__item--attractions feedback-form__item--row">
               <fieldset class="form-block">
                 <legend class="form-block__title">Посещенные&nbsp;<br> достопримечательности:</legend>
                 <ul class="form-block__fields form-fields form-fields--checkboxs">
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
                       <input class="visually-hidden form-control" type="checkbox" name="devils-bridge" checked>
-                      <span class="form-control__mark"></span>
+                      <span class="form-control__mark form-control__mark--checkbox"></span>
                       <span class="form-control__label">Мост Дьявола</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
                       <input class="visually-hidden form-control" type="checkbox" name="the-bell-mountain" checked>
-                      <span class="form-control__mark"></span>
+                      <span class="form-control__mark form-control__mark--checkbox"></span>
                       <span class="form-control__label">Гора-Колокол</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
                       <input class="visually-hidden form-control" type="checkbox" name="slide-park" checked>
-                      <span class="form-control__mark"></span>
+                      <span class="form-control__mark form-control__mark--checkbox"></span>
                       <span class="form-control__label">Слайд-парк</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
                       <input class="visually-hidden form-control" type="checkbox" name="red-rocks">
-                      <span class="form-control__mark"></span>
+                      <span class="form-control__mark form-control__mark--checkbox"></span>
                       <span class="form-control__label">Красные скалы</span>
                     </label>
                   </li>
@@ -166,7 +171,7 @@
           </form>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer footer--form">
         <p class="footer__tag footer-tag">#visitsedona</p>
         <ul class="footer__social social">
           <li class="social__item">
@@ -202,23 +207,23 @@
           </a>
         </div>
       </footer>
-      <div class="modal__container modal__container--closed">
+      <div class="modal-background modal-background--hidden">
         <div class="modal modal--success">
-          <section class="modal__content modal__content--success">
+          <div class="modal__content modal__content--success">
             <p class="modal__title">Ваш отзыв отправлен!</p>
             <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.&nbsp;</p>
-          </section>
+          </div>
           <span class="modal__button-container">
             <button class="modal__button modal__button--success button button--primary" type="button">Закрыть окно</button>
           </span>
         </div>
       </div>
-      <div class="modal__container modal__container--closed">
+      <div class="modal-background modal-background--hidden">
         <div class="modal modal--error">
-          <section class="modal__content modal__content--error">
+          <div class="modal__content modal__content--error">
             <p class="modal__title">Что-то пошло не&nbsp;так!</p>
             <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-          </section>
+          </div>
           <button class="modal__button modal__button--error button button--primary" type="button">Ok</button>
         </div>
       </div>

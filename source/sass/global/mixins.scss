@@ -11,12 +11,6 @@
   overflow: hidden;
 }
 
-@mixin flex($a: row) {
-  display: flex;
-  flex-direction: $a;
-  justify-content: center;
-}
-
 @mixin title($c: variables.$title-color-primery) {
   color: $c;
   font-weight: 700;

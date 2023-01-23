@@ -14,13 +14,13 @@ navToggle.addEventListener('click', function () {
 });
 
 let formBtn = document.querySelector('.feedback-form__button');
-let modal = document.querySelector('.modal__container');
+let modal = document.querySelector('.modal-background');
 let modalBtn = document.querySelector('.modal__button');
 
 formBtn.addEventListener('click', function () {
-  modal.classList.remove('modal__container--closed');
+  modal.classList.remove('modal-background--hidden');
 });
 
 modalBtn.addEventListener('click', function () {
-  modal.classList.add('modal__container--closed');
+  modal.classList.add('modal-background--hidden');
 });

@@ -1,5 +1,4 @@
 @use "global/variables";
-@use "global/mixins";
 
 .recomendations {
   background-color: variables.$background-color-primery;
@@ -13,7 +12,9 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    @include mixins.flex(column);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 256px;
     margin: 0;
@@ -23,6 +24,6 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 400px;
-    padding: 69px 59px 67px;
+    padding: 69px 55px;
   }
 }

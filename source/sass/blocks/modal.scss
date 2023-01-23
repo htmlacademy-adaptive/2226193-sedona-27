@@ -13,49 +13,30 @@
   &--error {
     margin: 116px auto auto;
     padding: 45px 41px 35px;
+
+    @media (min-width: variables.$tablet-width) {
+      width: 400px;
+      margin: 283px auto auto;
+      padding: 48px 47px 49px 46px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin: 244px auto auto;
+      padding: 47px 47px 49px 46px;
+    }
   }
 
   &--success {
     margin: 402px auto auto;
-  }
 
-  @media (min-width: variables.$tablet-width) {
-    &--error {
-      width: 400px;
-      margin: 283px auto auto;
-      padding: 50px 47px 49px 46px;
-    }
-
-    &--success {
+    @media (min-width: variables.$tablet-width) {
       width: 640px;
       margin: 162px auto auto;
     }
-  }
 
-  @media (min-width: variables.$desktop-width) {
-    &--error {
-      margin: 244px auto auto;
-      padding: 48px 47px 49px 46px;
-    }
-
-    &--success {
+    @media (min-width: variables.$desktop-width) {
       margin: 145px auto auto;
     }
-  }
-}
-
-.modal__container {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 2;
-
-  &--closed {
-    display: none;
   }
 }
 
@@ -66,40 +47,43 @@
     padding-bottom: 28px;
 
     @media (min-width: variables.$tablet-width) {
-      padding-bottom: 25px;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      padding-bottom: 23px;
+      padding-bottom: 47px;
     }
   }
 
   &--success {
-    padding: 39px 39px 30px 37px;
+    padding: 39px 39px 51px 37px;
 
     @media (min-width: variables.$tablet-width) {
-      padding: 53px 99px 30px 97px;
+      padding: 45px 99px 52px 98px;
     }
 
     @media (min-width: variables.$desktop-width) {
-      padding: 51px 99px 28px 97px;
+      padding: 42px 99px 52px 97px;
     }
   }
 }
 
 .modal__title {
-  margin-bottom: 32px;
+  margin: 0 0 25px 0;
   /* stylelint-disable-next-line at-rule-empty-line-before */
-  @include mixins.title();
+  @include mixins.title-small();
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 23px 0;
     font-size: 30px;
     line-height: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 25px 0;
   }
 }
 
 .modal__text {
+  margin: 0;
+  /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: center;
 }
@@ -110,7 +94,7 @@
   background-color: variables.$background-color-input;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 44px 91px;
+    padding: 45px 91px 43px;
   }
 }
 
@@ -125,9 +109,11 @@
 
   &--success {
     width: 100%;
+    font-size: 18px;
 
     @media (min-width: variables.$tablet-width) {
       width: 458px;
+      font-size: 21px;
     }
   }
 }

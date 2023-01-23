@@ -5,8 +5,6 @@
 @use "global/button";
 @use "blocks/visually-hidden";
 @use "blocks/page";
-@use "blocks/main-container";
-@use "blocks/header";
 @use "blocks/site-navigation";
 @use "blocks/hero";
 @use "blocks/hero-description";
@@ -28,6 +26,7 @@
 @use "blocks/form-control";
 @use "blocks/input";
 @use "blocks/textarea";
+@use "blocks/modal-background";
 @use "blocks/modal";
 @use "blocks/gallery";
 @use "blocks/cards";

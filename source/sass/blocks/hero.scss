@@ -15,11 +15,6 @@
     background-size: 320px auto;
   }
 
-  &--index {
-    padding: 84px 0;
-    background-position: center;
-  }
-
   &::after {
     position: absolute;
     width: 100%;
@@ -34,6 +29,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
+    padding: 95px 0 117px;
     background-image: url("/img/background-tablet.jpg");
     background-size: cover;
 
@@ -44,6 +40,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding: 102px 0 120px;
     background-image: url("/img/background-desktop.jpg");
     background-size: cover;
 
@@ -52,21 +49,51 @@
       background-size: 1200px auto;
     }
   }
+
+  &--index {
+    padding: 90px 0 84px;
+    background-position: center;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 77px 0 91px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 78px 0 90px;
+    }
+  }
 }
 
 .hero__image {
   @media (min-width: variables.$tablet-width) {
-    width: 461px;
-    height: 350px;
+    width: 457px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 460px;
+  }
+
+  &--index {
+    @media (min-width: variables.$tablet-width) {
+      width: 461px;
+    }
   }
 }
 
 .hero__description {
-  padding: 37px 20px 25px;
+  padding: 38px 20px 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 67px 120px 80px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 99px 255px 89px;
+  }
 
   &--index {
     position: relative;
-    padding: 32px 24px 25px;
+    padding: 33px 24px 32px;
 
     @media (max-width: variables.$mobile-width-only) {
       &::after {
@@ -82,13 +109,25 @@
         content: "";
       }
     }
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 48px 124px 56px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 59px 265px 44px;
+    }
   }
 
-  @media (min-width: variables.$tablet-width) {
-    padding: 48px 124px 67px;
-  }
+  &--form {
+    padding: 36px 20px 28px;
 
-  @media (min-width: variables.$desktop-width) {
-    padding: 59px 357px 65px;
+    @media (min-width: variables.$tablet-width) {
+      padding: 64px 120px 104px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 114px 120px 69px;
+    }
   }
 }

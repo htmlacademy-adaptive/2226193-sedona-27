@@ -5,32 +5,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 38px 29px 49px;
+  padding: 40px 28px 50px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 61px 166px 58px;
+    padding: 62px 166px 58px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 61px 382px 66px;
+    padding: 60px 260px 66px;
   }
 }
 
 .hook__title {
-  margin-bottom: 25px;
+  margin: 0 0 22px 0;
   /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.title();
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     /* stylelint-disable-next-line at-rule-empty-line-before */
     @include mixins.title-big();
   }
 }
 
 .hook__text {
-  margin-bottom: 32px;
+  margin: 0 0 31px 0;
   /* stylelint-disable-next-line at-rule-empty-line-before */
   @include mixins.text();
   text-align: center;
@@ -40,7 +40,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
 }
 
