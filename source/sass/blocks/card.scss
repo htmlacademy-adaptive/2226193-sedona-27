@@ -73,7 +73,9 @@
 }
 
 .card__description {
-  margin-left: 5px;
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 5px;
+  }
 }
 
 .card__title {
