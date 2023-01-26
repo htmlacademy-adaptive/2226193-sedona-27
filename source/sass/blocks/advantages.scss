@@ -7,24 +7,22 @@
   }
 }
 
-.advantages__advantage-container {
-  overflow: hidden;
-
+.advantages__item {
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
+    justify-content: flex-start;
 
-    &:nth-child(2n) {
+    &:nth-child(2) {
       flex-direction: row;
     }
   }
-}
 
-.advantages__item {
-  @media (min-width: variables.$tablet-width) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  &--briefly {
+    @media (min-width: variables.$tablet-width) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 }

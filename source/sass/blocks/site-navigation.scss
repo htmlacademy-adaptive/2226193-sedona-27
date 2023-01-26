@@ -82,6 +82,7 @@
     &--nojs .site-navigation__container {
       position: static;
       min-height: 0;
+      display: block;
     }
 
     &--nojs .site-navigation__logo {
