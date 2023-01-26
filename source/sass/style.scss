@@ -2,9 +2,9 @@
 @use "global/mixins";
 @use "global/fonts";
 @use "global/common";
-@use "global/button";
 @use "blocks/visually-hidden";
 @use "blocks/page";
+@use "blocks/button";
 @use "blocks/site-navigation";
 @use "blocks/hero";
 @use "blocks/hero-description";
@@ -23,7 +23,6 @@
 @use "blocks/form-block";
 @use "blocks/form-fields";
 @use "blocks/form-field";
-@use "blocks/form-control";
 @use "blocks/input";
 @use "blocks/textarea";
 @use "blocks/modal-background";

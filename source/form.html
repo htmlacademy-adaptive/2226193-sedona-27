@@ -56,22 +56,22 @@
         </section>
         <section class="feedback">
           <h2 class="visually-hidden">Форма отзыва</h2>
-          <form class="feedback__form feedback-form" action="#" method="POST">
+          <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="POST">
             <div class="feedback-form__item feedback-form__item--name feedback-form__item--column">
               <fieldset class="form-block">
                 <legend class="form-block__title">Представьтесь:</legend>
                 <ul class="form-block__fields form-fields">
                   <li class="form-fields__item form-field">
                     <label class="form-field__title" for="feedback-form-recipient-name">Имя*:</label>
-                    <input class="form-field__control form-control input" type="text" id="feedback-form-recipient-name" name="feedback-form-recipient-name" placeholder="Имя" value="Пётр" required>
+                    <input class="form-field__control input" type="text" id="feedback-form-recipient-name" name="feedback-form-recipient-name" placeholder="Имя" value="Пётр" required>
                   </li>
                   <li class="form-fields__item form-field">
                     <label class="form-field__title" for="feedback-form-recipient-surname">Фамилия*:</label>
-                    <input class="form-field__control form-control input" type="text" id="feedback-form-recipient-surname" name="feedback-form-recipient-surname" placeholder="Фамилия" value="Пустота" required>
+                    <input class="form-field__control input" type="text" id="feedback-form-recipient-surname" name="feedback-form-recipient-surname" placeholder="Фамилия" value="Пустота" required>
                   </li>
                   <li class="form-fields__item form-field">
                     <label class="form-field__title" for="feedback-form-recipient-middle_name">Отчество:</label>
-                    <input class="form-field__control form-control input" type="text" id="feedback-form-recipient-middle_name" name="feedback-form-recipient-middle_name" placeholder="Отчество" value="Викторович">
+                    <input class="form-field__control input" type="text" id="feedback-form-recipient-middle_name" name="feedback-form-recipient-middle_name" placeholder="Отчество" value="Викторович">
                   </li>
                 </ul>
               </fieldset>
@@ -82,13 +82,13 @@
                 <ul class="form-block__fields form-fields form-fields--right">
                   <li class="form-fields__item form-fields__item--contacts form-field">
                     <label class="form-field__title" for="feedback-form-recipient-phone">Контактный телефон*:</label>
-                    <span class="form-control form-control--with-icon form-control--phone">
-                      <input class="input input--with-icon" type="text" id="feedback-form-recipient-phone" name="feedback-form-recipient-phone" placeholder="Введите телефон" required>
+                    <span class="form-field__control form-field__control--with-icon form-field__control--phone">
+                      <input class="input input--with-icon" type="tel" id="feedback-form-recipient-phone" name="feedback-form-recipient-phone" placeholder="Введите телефон" required>
                     </span>
                   </li>
                   <li class="form-fields__item form-fields__item--contacts form-field">
                     <label class="form-field__title" for="feedback-form-recipient-email">Электронная почта*:</label>
-                    <span class="form-control form-control--with-icon form-control--email">
+                    <span class="form-field__control form-field__control--with-icon form-field__control--email">
                       <input class="input input--with-icon" type="email" id="feedback-form-recipient-email" name="feedback-form-recipient-email" placeholder="Введите e-mail" required>
                     </span>
                   </li>
@@ -101,23 +101,23 @@
                 <ul class="form-block__fields form-fields form-fields--radios">
                   <li class="form-fields__item form-field form-field--radio">
                     <label class="form-field__title">
-                      <input class="visually-hidden form-control" type="radio" name="impression" value="positive" checked>
-                      <span class="form-control__mark form-control__mark--radio"></span>
-                      <span class="form-control__label">Скорее положительное</span>
+                      <input class="visually-hidden form-field__control" type="radio" name="impression" value="positive" checked>
+                      <span class="form-field__mark form-field__mark--radio"></span>
+                      <span class="form-field__label">Скорее положительное</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--radio">
                     <label class="form-field__title">
-                      <input class="visually-hidden form-control" type="radio" name="impression" value="negative">
-                      <span class="form-control__mark form-control__mark--radio"></span>
-                      <span class="form-control__label">Скорее отрицательное</span>
+                      <input class="visually-hidden form-field__control" type="radio" name="impression" value="negative">
+                      <span class="form-field__mark form-field__mark--radio"></span>
+                      <span class="form-field__label">Скорее отрицательное</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--radio">
                     <label class="form-field__title">
-                      <input class="visually-hidden form-control" type="radio" name="impression" value="dont-know">
-                      <span class="form-control__mark form-control__mark--radio"></span>
-                      <span class="form-control__label">Затрудняюсь ответить</span>
+                      <input class="visually-hidden form-field__control" type="radio" name="impression" value="dont-know">
+                      <span class="form-field__mark form-field__mark--radio"></span>
+                      <span class="form-field__label">Затрудняюсь ответить</span>
                     </label>
                   </li>
                 </ul>
@@ -129,30 +129,30 @@
                 <ul class="form-block__fields form-fields form-fields--checkboxs">
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
-                      <input class="visually-hidden form-control" type="checkbox" name="devils-bridge" checked>
-                      <span class="form-control__mark form-control__mark--checkbox"></span>
-                      <span class="form-control__label">Мост Дьявола</span>
+                      <input class="visually-hidden form-field__control" type="checkbox" name="devils-bridge" checked>
+                      <span class="form-field__mark form-field__mark--checkbox"></span>
+                      <span class="form-field__label">Мост Дьявола</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
-                      <input class="visually-hidden form-control" type="checkbox" name="the-bell-mountain" checked>
-                      <span class="form-control__mark form-control__mark--checkbox"></span>
-                      <span class="form-control__label">Гора-Колокол</span>
+                      <input class="visually-hidden form-field__control" type="checkbox" name="the-bell-mountain" checked>
+                      <span class="form-field__mark form-field__mark--checkbox"></span>
+                      <span class="form-field__label">Гора-Колокол</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
-                      <input class="visually-hidden form-control" type="checkbox" name="slide-park" checked>
-                      <span class="form-control__mark form-control__mark--checkbox"></span>
-                      <span class="form-control__label">Слайд-парк</span>
+                      <input class="visually-hidden form-field__control" type="checkbox" name="slide-park" checked>
+                      <span class="form-field__mark form-field__mark--checkbox"></span>
+                      <span class="form-field__label">Слайд-парк</span>
                     </label>
                   </li>
                   <li class="form-fields__item form-field form-field--checkbox">
                     <label class="form-field__title">
-                      <input class="visually-hidden form-control" type="checkbox" name="red-rocks">
-                      <span class="form-control__mark form-control__mark--checkbox"></span>
-                      <span class="form-control__label">Красные скалы</span>
+                      <input class="visually-hidden form-field__control" type="checkbox" name="red-rocks">
+                      <span class="form-field__mark form-field__mark--checkbox"></span>
+                      <span class="form-field__label">Красные скалы</span>
                     </label>
                   </li>
                 </ul>
@@ -161,7 +161,10 @@
             <div class="feedback-form__item feedback-form__item--row">
               <fieldset class="form-block">
                 <legend class="form-block__title">Опишите свои эмоции:</legend>
-                <textarea class="form-control input textarea" id="feedback-form-feedback" name="feedback-form-feedback" placeholder="Опишите подробно все свои восторги"></textarea>
+                <label class="form-field__title form-field__title--hidden">
+                  <span class="visually-hidden">Опишите свои эмоции:</span>
+                  <textarea class="input textarea" id="feedback-form-feedback" name="feedback-form-feedback" placeholder="Опишите подробно все свои восторги"></textarea>
+                </label>
               </fieldset>
             </div>
             <div class="feedback-form__button-container">

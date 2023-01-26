@@ -36,7 +36,7 @@
         position: absolute;
         content: "";
         width: 1px;
-        height: 338px;
+        height: calc(100% - 47px);
         top: 0;
         right: 0;
         background-color: #dbdbdb;
